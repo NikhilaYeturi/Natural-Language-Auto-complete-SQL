@@ -1,0 +1,184 @@
+[
+  {
+    "sqlQuery": "SELECT * FROM events;",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-23T09:01:42.761Z",
+    "rowCount": 10
+  },
+  {
+    "sqlQuery": "SELECT * FROM events;",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-23T09:01:42.780Z",
+    "rowCount": 10
+  },
+  {
+    "sqlQuery": "SELECT * FROM events WHERE merchant_name = 'Starbucks';",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-23T09:02:10.111Z",
+    "rowCount": 3
+  },
+  {
+    "sqlQuery": "SELECT * FROM events WHERE merchant_name = 'Starbucks';",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-23T09:02:10.126Z",
+    "rowCount": 3
+  },
+  {
+    "sqlQuery": "SELECT * FROM events WHERE merchant_name = 'Starbucks';",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-23T09:03:40.121Z",
+    "rowCount": 3
+  },
+  {
+    "sqlQuery": "SELECT * FROM events WHERE merchant_name = 'Amazon';",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-23T09:04:05.589Z",
+    "rowCount": 2
+  },
+  {
+    "sqlQuery": "SELECT * FROM events WHERE merchant_name = 'Amazon';",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-23T09:04:05.601Z",
+    "rowCount": 2
+  },
+  {
+    "sqlQuery": "SELECT * FROM events WHERE merchant_name = 'Amazon';",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-23T09:05:06.885Z",
+    "rowCount": 2
+  },
+  {
+    "sqlQuery": "SELECT id, merchant_name, amount, category, created_at FROM events;",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-23T09:05:24.046Z",
+    "rowCount": 10
+  },
+  {
+    "sqlQuery": "SELECT * FROM events;",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-23T09:19:35.369Z",
+    "rowCount": 10
+  },
+  {
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM events WHERE DATE_TRUNC('month', created_at) = DATE_TRUNC('month', CURRENT_DATE);",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-23T09:31:59.505Z",
+    "rowCount": 10
+  },
+  {
+    "sqlQuery": "SELECT * FROM events;",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-23T09:40:52.342Z",
+    "rowCount": 10
+  },
+  {
+    "sqlQuery": "SELECT DATE(created_at) AS day, SUM(amount) AS total_spent FROM events WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE) GROUP BY day ORDER BY day",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-24T15:10:20.954Z",
+    "rowCount": 3
+  },
+  {
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM events WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-24T15:11:41.718Z",
+    "rowCount": 3
+  },
+  {
+    "sqlQuery": "SELECT DATE_TRUNC('month', created_at) AS month, SUM(amount) AS total_spent FROM events WHERE merchant_name = 'Starbucks' GROUP BY month ORDER BY month;",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-24T15:15:47.143Z",
+    "rowCount": 3
+  },
+  {
+    "sqlQuery": "SELECT * FROM events WHERE created_at >= CURRENT_DATE - INTERVAL '30 days' ORDER BY created_at DESC",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-24T15:17:34.199Z",
+    "rowCount": 10
+  },
+  {
+    "sqlQuery": "SELECT * FROM events WHERE created_at >= CURRENT_DATE - INTERVAL '30 days' ORDER BY created_at DESC",
+    "source": "llm_suggestion",
+    "createdAt": "2025-11-24T16:34:43.857Z",
+    "rowCount": 10
+  },
+  {
+    "naturalText": "SELECT * FROM transactions",
+    "sqlQuery": "```sql\nSELECT * FROM transactions;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:25:59.558Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions",
+    "sqlQuery": "```sql\nSELECT * FROM transactions;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:25:59.633Z"
+  },
+  {
+    "naturalText": "Tell me all expenses",
+    "sqlQuery": "```sql\nSELECT * FROM transactions;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:26:30.674Z"
+  },
+  {
+    "sqlQuery": "```sql\nSELECT * FROM transactions;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:26:31.563Z"
+  },
+  {
+    "sqlQuery": "```sql\nSELECT * FROM transactions;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:26:31.591Z"
+  },
+  {
+    "naturalText": "tell me all expenses",
+    "sqlQuery": "```sql\nSELECT * FROM transactions;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:27:33.817Z"
+  },
+  {
+    "sqlQuery": "```sql\nSELECT * FROM transactions WHERE merchant_name IS NULL;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:27:34.518Z"
+  },
+  {
+    "sqlQuery": "```sql\nSELECT * FROM transactions WHERE merchant_name IS NULL;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:27:34.619Z"
+  },
+  {
+    "sqlQuery": "```sql\nSELECT * FROM transactions WHERE merchant_name IS NULL;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:35:14.236Z"
+  },
+  {
+    "sqlQuery": "```sql\nSELECT * FROM transactions WHERE merchant_name IS NULL;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:35:14.374Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "```sql\nSELECT * FROM transactions WHERE amount < 0;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:35:23.592Z"
+  },
+  {
+    "sqlQuery": "```sql\nSELECT * FROM transactions;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:35:24.308Z"
+  },
+  {
+    "sqlQuery": "```sql\nSELECT * FROM transactions WHERE merchant_name IS NULL;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:35:24.459Z"
+  },
+  {
+    "sqlQuery": "```sql\nSELECT * FROM transactions WHERE merchant_name IS NULL;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:36:10.011Z"
+  },
+  {
+    "sqlQuery": "```sql\nSELECT * FROM transactions WHERE merchant_name IS NULL;\n```",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:36:10.068Z"
+  }
+]

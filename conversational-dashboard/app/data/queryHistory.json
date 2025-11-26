@@ -1,0 +1,1706 @@
+[
+  {
+    "naturalText": "undefined",
+    "sqlQuery": "SELECT * FROM transactions;",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:50:42.109Z"
+  },
+  {
+    "naturalText": "undefined",
+    "sqlQuery": "SELECT * FROM transactions;",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T04:50:42.130Z"
+  },
+  {
+    "naturalText": "",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0",
+    "rowCount": 0,
+    "createdAt": "2025-11-25T05:32:04.964Z"
+  },
+  {
+    "naturalText": "",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-25T05:32:28.845Z"
+  },
+  {
+    "naturalText": "",
+    "sqlQuery": "Give me all uber expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T05:33:09.925Z"
+  },
+  {
+    "naturalText": "",
+    "sqlQuery": "Give me all uber expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T05:33:18.169Z"
+  },
+  {
+    "naturalText": "",
+    "sqlQuery": "ttell me all uber expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T05:34:24.508Z"
+  },
+  {
+    "naturalText": "",
+    "sqlQuery": "Tell me the expenses of uber",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T05:35:35.150Z"
+  },
+  {
+    "naturalText": "",
+    "sqlQuery": "Tell me the expenses of uber",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T05:35:36.163Z"
+  },
+  {
+    "naturalText": "",
+    "sqlQuery": "Tell me the expenses of uber",
+    "rowCount": 10,
+    "createdAt": "2025-11-25T05:35:36.181Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber';",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber';",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T03:46:10.918Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber';",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber';",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T03:46:14.345Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber';",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber';",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T03:46:14.361Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' ORDER BY created_at",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' ORDER BY created_at",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T03:50:12.921Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' ORDER BY created_at",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' ORDER BY created_at",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T03:50:15.278Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' ORDER BY created_at",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' ORDER BY created_at",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T03:50:15.293Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T03:50:38.518Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T03:50:38.614Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T03:50:38.629Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'starbucks' ORDER BY created_at",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'starbucks' ORDER BY created_at",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T03:51:05.645Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'starbucks' ORDER BY created_at",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'starbucks' ORDER BY created_at",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T03:51:05.704Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'starbucks' ORDER BY created_at",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'starbucks' ORDER BY created_at",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T03:51:05.716Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'starbucks' ORDER BY created_at DESC",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'starbucks' ORDER BY created_at DESC",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T03:51:45.509Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'starbucks' ORDER BY created_at DESC",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'starbucks' ORDER BY created_at DESC",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T03:51:45.635Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'starbucks' ORDER BY created_at DESC",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'starbucks' ORDER BY created_at DESC",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T03:51:45.647Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T03:52:03.089Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T03:52:03.184Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T03:52:03.193Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T03:54:17.823Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T03:54:17.882Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T03:54:17.893Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T04:00:22.497Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T04:00:24.737Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T04:00:24.750Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T04:00:54.473Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T04:00:54.580Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T04:00:54.593Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks') AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks') AND amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T04:01:59.462Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks') AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks') AND amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T04:01:59.549Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks') AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks') AND amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T04:01:59.560Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T04:02:25.982Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T04:02:26.073Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T04:02:26.086Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T04:03:30.491Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T04:03:30.605Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T04:03:30.617Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "rowCount": 4,
+    "createdAt": "2025-11-26T04:04:51.130Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks')",
+    "rowCount": 4,
+    "createdAt": "2025-11-26T04:08:51.391Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks')",
+    "rowCount": 4,
+    "createdAt": "2025-11-26T04:08:53.652Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks')",
+    "rowCount": 4,
+    "createdAt": "2025-11-26T04:08:53.663Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Amazon')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Amazon')",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T04:17:30.893Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Amazon')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Amazon')",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T04:17:31.061Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Amazon')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Amazon')",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T04:17:31.072Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'starbucks', 'amazon')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'starbucks', 'amazon')",
+    "rowCount": 6,
+    "createdAt": "2025-11-26T04:38:10.810Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'starbucks', 'amazon')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'starbucks', 'amazon')",
+    "rowCount": 6,
+    "createdAt": "2025-11-26T04:38:11.014Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'starbucks', 'amazon')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'starbucks', 'amazon')",
+    "rowCount": 6,
+    "createdAt": "2025-11-26T04:38:11.031Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'amazon')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'amazon')",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T04:38:28.570Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'amazon')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'amazon')",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T04:38:28.685Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'amazon')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'amazon')",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T04:38:28.702Z"
+  },
+  {
+    "naturalText": "Tell me expenses of uber and amazon",
+    "sqlQuery": "Tell me expenses of uber and amazon",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T04:41:30.897Z"
+  },
+  {
+    "naturalText": "Tell me expenses of uber and amazon",
+    "sqlQuery": "Tell me expenses of uber and amazon",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T04:41:33.520Z"
+  },
+  {
+    "naturalText": "Tell me expenses of uber and amazon",
+    "sqlQuery": "Tell me expenses of uber and amazon",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T04:41:33.540Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T04:42:45.413Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T04:42:45.523Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T04:42:45.540Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'starbucks')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'starbucks')",
+    "rowCount": 4,
+    "createdAt": "2025-11-26T04:43:00.717Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'starbucks')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'starbucks')",
+    "rowCount": 4,
+    "createdAt": "2025-11-26T04:43:00.851Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'starbucks')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('uber', 'starbucks')",
+    "rowCount": 4,
+    "createdAt": "2025-11-26T04:43:00.882Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:01:49.836Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:01:50.070Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:01:50.086Z"
+  },
+  {
+    "naturalText": "Tell me expenses of uber and amazon and other ones too, actually give all expenses",
+    "sqlQuery": "Tell me expenses of uber and amazon and other ones too, actually give all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:02:14.342Z"
+  },
+  {
+    "naturalText": "Tell me expenses of uber and amazon and other ones too, actually give all expenses",
+    "sqlQuery": "Tell me expenses of uber and amazon and other ones too, actually give all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:02:14.603Z"
+  },
+  {
+    "naturalText": "Tell me expenses of uber and amazon and other ones too, actually give all expenses",
+    "sqlQuery": "Tell me expenses of uber and amazon and other ones too, actually give all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:02:14.630Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:02:59.037Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:02:59.246Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:02:59.258Z"
+  },
+  {
+    "naturalText": "Give me all expenses except uber",
+    "sqlQuery": "Give me all expenses except uber",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:03:25.436Z"
+  },
+  {
+    "naturalText": "Give me all expenses except uber",
+    "sqlQuery": "Give me all expenses except uber",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:03:25.641Z"
+  },
+  {
+    "naturalText": "Give me all expenses except uber",
+    "sqlQuery": "Give me all expenses except uber",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:03:25.655Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:05:41.065Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:05:41.306Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:05:41.318Z"
+  },
+  {
+    "naturalText": "Give me uber expenses",
+    "sqlQuery": "Give me uber expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:05:46.918Z"
+  },
+  {
+    "naturalText": "Give me uber expenses",
+    "sqlQuery": "Give me uber expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:05:47.042Z"
+  },
+  {
+    "naturalText": "Give me uber expenses",
+    "sqlQuery": "Give me uber expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:05:47.055Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category != 'uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category != 'uber'",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:07:49.617Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category != 'uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category != 'uber'",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:07:53.337Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category != 'uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category != 'uber'",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:07:53.381Z"
+  },
+  {
+    "naturalText": "Give me all expenses except Uber",
+    "sqlQuery": "Give me all expenses except Uber",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:08:08.479Z"
+  },
+  {
+    "naturalText": "Give me all expenses except Uber",
+    "sqlQuery": "Give me all expenses except Uber",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:08:08.584Z"
+  },
+  {
+    "naturalText": "Give me all expenses except Uber",
+    "sqlQuery": "Give me all expenses except Uber",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:08:08.600Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:08:21.378Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:08:21.543Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:08:21.554Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:08:40.950Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:08:41.051Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:08:41.073Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:09:17.941Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:09:20.843Z"
+  },
+  {
+    "naturalText": "Give me all expenses",
+    "sqlQuery": "Give me all expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:09:20.862Z"
+  },
+  {
+    "naturalText": "Tell me all expenses of Starbucks",
+    "sqlQuery": "Tell me all expenses of Starbucks",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:10:28.209Z"
+  },
+  {
+    "naturalText": "Tell me all expenses of Starbucks",
+    "sqlQuery": "Tell me all expenses of Starbucks",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:10:28.411Z"
+  },
+  {
+    "naturalText": "Tell me all expenses of Starbucks",
+    "sqlQuery": "Tell me all expenses of Starbucks",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:10:28.430Z"
+  },
+  {
+    "naturalText": "Give starbucks expenses",
+    "sqlQuery": "Give starbucks expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:10:46.558Z"
+  },
+  {
+    "naturalText": "Give starbucks expenses",
+    "sqlQuery": "Give starbucks expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:10:46.636Z"
+  },
+  {
+    "naturalText": "Give starbucks expenses",
+    "sqlQuery": "Give starbucks expenses",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:10:46.654Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:15:08.667Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:15:08.869Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:15:08.904Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:15:24.903Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:15:25.006Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:15:25.022Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:16:06.931Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:16:07.052Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:16:07.073Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0 ORDER BY created_at DESC;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0 ORDER BY created_at DESC;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:25:32.681Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0 ORDER BY created_at DESC;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0 ORDER BY created_at DESC;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:25:34.938Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0 ORDER BY created_at DESC;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0 ORDER BY created_at DESC;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:25:34.953Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:28:42.929Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:28:43.189Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:28:43.208Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'entertainment'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'entertainment'",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T05:29:28.871Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'entertainment'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'entertainment'",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T05:29:28.974Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'entertainment'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'entertainment'",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T05:29:28.992Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:35:50.876Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:35:53.937Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:35:53.949Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:42:40.925Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:42:43.804Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:42:43.852Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:50:02.488Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:50:05.056Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T05:50:05.085Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:52:07.582Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:52:07.773Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:52:07.786Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expense FROM transactions WHERE category = 'coffee' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE());",
+    "sqlQuery": "SELECT SUM(amount) AS total_expense FROM transactions WHERE category = 'coffee' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE());",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:52:37.497Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expense FROM transactions WHERE category = 'coffee' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE());",
+    "sqlQuery": "SELECT SUM(amount) AS total_expense FROM transactions WHERE category = 'coffee' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE());",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:52:37.604Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expense FROM transactions WHERE category = 'coffee' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE());",
+    "sqlQuery": "SELECT SUM(amount) AS total_expense FROM transactions WHERE category = 'coffee' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE());",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T05:52:37.623Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:53:54.499Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:53:54.695Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:53:54.716Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:54:56.382Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:54:56.565Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T05:54:56.614Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:01:58.344Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:01:58.544Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:01:58.593Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:06:34.000Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:06:34.333Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:06:34.343Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:07:04.586Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:07:04.670Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:07:04.685Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'starbucks' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'starbucks' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:10:20.801Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'starbucks' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'starbucks' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:10:20.883Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'starbucks' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'starbucks' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:10:20.927Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:10:51.537Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:10:51.641Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:10:51.654Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:11:19.336Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:11:19.401Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:11:19.415Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:11:38.990Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:11:39.047Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:11:39.062Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:11:59.677Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:11:59.763Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:11:59.773Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_spent FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM transactions WHERE category = 'coffee'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:12:21.083Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_spent FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM transactions WHERE category = 'coffee'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:12:21.181Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_spent FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM transactions WHERE category = 'coffee'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:12:21.196Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:13:04.176Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:13:04.235Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:13:04.248Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Amazon' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Amazon' AND amount < 0;",
+    "rowCount": 2,
+    "createdAt": "2025-11-26T06:13:17.901Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Amazon' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Amazon' AND amount < 0;",
+    "rowCount": 2,
+    "createdAt": "2025-11-26T06:13:17.961Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Amazon' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Amazon' AND amount < 0;",
+    "rowCount": 2,
+    "createdAt": "2025-11-26T06:13:17.976Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Amazon' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE())",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Amazon' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE())",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:13:43.180Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Amazon' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE())",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Amazon' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE())",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:13:43.259Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Amazon' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE())",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Amazon' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE())",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:13:43.275Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'food'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'food'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:14:09.915Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'food'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'food'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:14:10.010Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'food'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'food'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:14:10.019Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_dining_expenses FROM transactions WHERE category = 'dining' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE())",
+    "sqlQuery": "SELECT SUM(amount) AS total_dining_expenses FROM transactions WHERE category = 'dining' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE())",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:14:37.813Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_dining_expenses FROM transactions WHERE category = 'dining' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE())",
+    "sqlQuery": "SELECT SUM(amount) AS total_dining_expenses FROM transactions WHERE category = 'dining' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE())",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:14:37.873Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_dining_expenses FROM transactions WHERE category = 'dining' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE())",
+    "sqlQuery": "SELECT SUM(amount) AS total_dining_expenses FROM transactions WHERE category = 'dining' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE())",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:14:37.887Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:15:10.280Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:15:10.340Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:15:10.352Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:15:38.900Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:15:38.989Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:15:38.998Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:16:17.383Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:16:17.484Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:16:17.493Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:16:42.227Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:16:42.308Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Starbucks' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:16:42.323Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:17:35.296Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:17:35.405Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:17:35.422Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_utilities_expenses FROM transactions WHERE category = 'utilities' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_utilities_expenses FROM transactions WHERE category = 'utilities' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:23:08.202Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_utilities_expenses FROM transactions WHERE category = 'utilities' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_utilities_expenses FROM transactions WHERE category = 'utilities' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:23:08.363Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_utilities_expenses FROM transactions WHERE category = 'utilities' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_utilities_expenses FROM transactions WHERE category = 'utilities' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:23:08.374Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'subscription'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'subscription'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:23:26.504Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'subscription'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'subscription'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:23:26.622Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'subscription'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'subscription'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:23:26.633Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'travel' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'travel' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T06:24:33.150Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'travel' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'travel' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T06:24:33.280Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'travel' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'travel' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T06:24:33.288Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_entertainment_expenses FROM transactions WHERE category = 'entertainment' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_entertainment_expenses FROM transactions WHERE category = 'entertainment' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:25:16.474Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_entertainment_expenses FROM transactions WHERE category = 'entertainment' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_entertainment_expenses FROM transactions WHERE category = 'entertainment' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:25:16.563Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_entertainment_expenses FROM transactions WHERE category = 'entertainment' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_entertainment_expenses FROM transactions WHERE category = 'entertainment' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:25:16.576Z"
+  },
+  {
+    "naturalText": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'dining' GROUP BY merchant_name",
+    "sqlQuery": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'dining' GROUP BY merchant_name",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:25:41.167Z"
+  },
+  {
+    "naturalText": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'dining' GROUP BY merchant_name",
+    "sqlQuery": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'dining' GROUP BY merchant_name",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:25:41.257Z"
+  },
+  {
+    "naturalText": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'dining' GROUP BY merchant_name",
+    "sqlQuery": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'dining' GROUP BY merchant_name",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:25:41.269Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T06:25:51.323Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T06:25:51.398Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount < 0;",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T06:25:51.407Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:26:06.175Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:26:06.260Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:26:06.286Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE());",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE());",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:31:45.959Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE());",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE());",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:31:49.378Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE());",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND MONTH(created_at) = MONTH(CURRENT_DATE()) AND YEAR(created_at) = YEAR(CURRENT_DATE());",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:31:49.389Z"
+  },
+  {
+    "naturalText": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'shopping' GROUP BY merchant_name;",
+    "sqlQuery": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'shopping' GROUP BY merchant_name;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:33:21.900Z"
+  },
+  {
+    "naturalText": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'shopping' GROUP BY merchant_name;",
+    "sqlQuery": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'shopping' GROUP BY merchant_name;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:33:22.044Z"
+  },
+  {
+    "naturalText": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'shopping' GROUP BY merchant_name;",
+    "sqlQuery": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'shopping' GROUP BY merchant_name;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:33:22.087Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:34:05.853Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:34:05.976Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT SUM(amount) AS total_spent FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:34:05.985Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:34:27.994Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:34:28.106Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:34:28.114Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:36:25.525Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:36:25.676Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks' AND amount < 0;",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:36:25.689Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:36:49.079Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:36:49.170Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber' AND amount < 0;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:36:49.184Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:39:15.177Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:39:15.338Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:39:15.348Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:41:08.945Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:41:09.077Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:41:09.090Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:48:09.022Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:48:09.174Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' AND created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:48:09.183Z"
+  },
+  {
+    "naturalText": "SELECT DATE_TRUNC('month', created_at) AS month, SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' GROUP BY month ORDER BY month;",
+    "sqlQuery": "SELECT DATE_TRUNC('month', created_at) AS month, SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' GROUP BY month ORDER BY month;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:48:23.549Z"
+  },
+  {
+    "naturalText": "SELECT DATE_TRUNC('month', created_at) AS month, SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' GROUP BY month ORDER BY month;",
+    "sqlQuery": "SELECT DATE_TRUNC('month', created_at) AS month, SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' GROUP BY month ORDER BY month;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:48:23.613Z"
+  },
+  {
+    "naturalText": "SELECT DATE_TRUNC('month', created_at) AS month, SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' GROUP BY month ORDER BY month;",
+    "sqlQuery": "SELECT DATE_TRUNC('month', created_at) AS month, SUM(amount) AS total_coffee_expenses FROM transactions WHERE category = 'coffee' GROUP BY month ORDER BY month;",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:48:23.625Z"
+  },
+  {
+    "naturalText": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'grocery' GROUP BY merchant_name",
+    "sqlQuery": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'grocery' GROUP BY merchant_name",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:48:47.477Z"
+  },
+  {
+    "naturalText": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'grocery' GROUP BY merchant_name",
+    "sqlQuery": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'grocery' GROUP BY merchant_name",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:48:47.542Z"
+  },
+  {
+    "naturalText": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'grocery' GROUP BY merchant_name",
+    "sqlQuery": "SELECT merchant_name, SUM(amount) AS total_expense FROM transactions WHERE category = 'grocery' GROUP BY merchant_name",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:48:47.560Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:49:07.900Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:49:07.989Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE category = 'groceries'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:49:08.005Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:49:34.502Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:49:34.604Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:49:34.635Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:49:47.641Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:49:47.718Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T06:49:47.732Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL WEEKDAY(CURDATE()) DAY)",
+    "sqlQuery": "SELECT * FROM transactions WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL WEEKDAY(CURDATE()) DAY)",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T06:50:22.500Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL WEEKDAY(CURDATE()) DAY)",
+    "sqlQuery": "SELECT * FROM transactions WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL WEEKDAY(CURDATE()) DAY)",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T06:50:22.550Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL WEEKDAY(CURDATE()) DAY)",
+    "sqlQuery": "SELECT * FROM transactions WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL WEEKDAY(CURDATE()) DAY)",
+    "rowCount": 10,
+    "createdAt": "2025-11-26T06:50:22.566Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:51:47.701Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:51:47.758Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expenses FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:51:47.773Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expense FROM transactions WHERE created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expense FROM transactions WHERE created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:52:08.569Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expense FROM transactions WHERE created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expense FROM transactions WHERE created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:52:08.625Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expense FROM transactions WHERE created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "sqlQuery": "SELECT SUM(amount) AS total_expense FROM transactions WHERE created_at >= DATE_TRUNC('week', CURRENT_DATE)",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T06:52:08.646Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'dining out'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'dining out'",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T07:01:39.389Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'dining out'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'dining out'",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T07:01:39.544Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'dining out'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'dining out'",
+    "rowCount": 0,
+    "createdAt": "2025-11-26T07:01:39.556Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expense FROM transactions WHERE category = 'transportation'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expense FROM transactions WHERE category = 'transportation'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T07:02:04.628Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expense FROM transactions WHERE category = 'transportation'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expense FROM transactions WHERE category = 'transportation'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T07:02:04.694Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_expense FROM transactions WHERE category = 'transportation'",
+    "sqlQuery": "SELECT SUM(amount) AS total_expense FROM transactions WHERE category = 'transportation'",
+    "rowCount": 1,
+    "createdAt": "2025-11-26T07:02:04.709Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'shopping'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'shopping'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T07:02:31.101Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'shopping'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'shopping'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T07:02:31.178Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'shopping'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'shopping'",
+    "rowCount": 3,
+    "createdAt": "2025-11-26T07:02:31.197Z"
+  }
+]

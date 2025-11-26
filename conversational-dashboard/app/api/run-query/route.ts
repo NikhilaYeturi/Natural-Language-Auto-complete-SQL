@@ -1,0 +1,110 @@
+import { NextResponse } from "next/server";
+import { SAMPLE_TRANSACTIONS } from "@/lib/sampleData";
+import { appendQueryHistory } from "@/lib/queryHistory";
+
+export async function POST(req: Request) {
+  try {
+    // Accept either { query } (older) or { sql } (frontend uses this)
+    const body = await req.json();
+    const sql = (body && (body.sql || body.query)) || "";
+
+    if (!sql || typeof sql !== "string") {
+      return NextResponse.json({ sql: "", rows: [] });
+    }
+
+    let rows = [...SAMPLE_TRANSACTIONS];
+    let outputRows: any[] = rows;
+
+    // Support merchant_name = 'X' or merchant_name IN ('A','B') - case-insensitive
+    // Also support queries that filter by category (e.g. category = 'coffee')
+    
+    if (/merchant_name\s+in\s*\(([^)]+)\)/i.test(sql)) {
+      const match = sql.match(/merchant_name\s+in\s*\(([^)]+)\)/i);
+      if (match) {
+        const list = match[1]
+          .split(',')
+          .map((s) => s.replace(/['"\s]/g, '').toLowerCase())
+          .filter(Boolean);
+
+        outputRows = rows.filter((r) => list.includes(String(r.merchant_name).toLowerCase()));
+      }
+    } else if (/merchant_name\s*=\s*'([^']+)'/i.test(sql)) {
+      const match = sql.match(/merchant_name\s*=\s*'([^']+)'/i);
+      if (match) {
+        const merchant = match[1].toLowerCase();
+        outputRows = rows.filter((r) => String(r.merchant_name).toLowerCase() === merchant);
+      }
+    } else if (/category\s*=\s*'([^']+)'/i.test(sql) || /category\s+in\s*\(([^)]+)\)/i.test(sql)) {
+      // If SQL filters by category, try mapping category terms to merchant_name(s).
+      // Example: category = 'coffee' -> map to ['Starbucks']
+      const categoryInMatch = sql.match(/category\s+in\s*\(([^)]+)\)/i);
+      let categories: string[] = [];
+
+      if (categoryInMatch) {
+        categories = categoryInMatch[1]
+          .split(',')
+          .map((s) => s.replace(/['"\s]/g, '').toLowerCase())
+          .filter(Boolean);
+      } else {
+        const m = sql.match(/category\s*=\s*'([^']+)'/i);
+        if (m) categories = [m[1].toLowerCase()];
+      }
+
+      // Simple mapping table: map generic categories to merchant names
+      const CATEGORY_TO_MERCHANTS: Record<string, string[]> = {
+        coffee: ['Starbucks'],
+        uber: ['Uber'],
+        groceries: ['Target', 'Whole Foods', 'Walmart'],
+      };
+
+      // Collect merchant candidates from mapped categories
+      const mappedMerchants = categories.flatMap((c) => CATEGORY_TO_MERCHANTS[c] || []);
+
+      if (mappedMerchants.length > 0) {
+        const lowerSet = mappedMerchants.map((m) => m.toLowerCase());
+        outputRows = rows.filter((r) => lowerSet.includes(String(r.merchant_name).toLowerCase()));
+      } else {
+        // fallback: filter by the category field itself
+        outputRows = rows.filter((r) => categories.includes(String(r.category).toLowerCase()));
+      }
+    }
+
+    // SUM(amount)
+    if (/sum\s*\(\s*amount\s*\)/i.test(sql)) {
+      const total = outputRows.reduce(
+        (sum, r) => sum + Number(r.amount),
+        0
+      );
+
+      outputRows = [
+        { label: "total", value: total }
+      ];
+    }
+
+    // GROUP BY category
+    if (/group\s+by\s+category/i.test(sql)) {
+      const grouped: Record<string, number> = {};
+
+      rows.forEach((r) => {
+        grouped[r.category] = (grouped[r.category] || 0) + Number(r.amount);
+      });
+
+      outputRows = Object.entries(grouped).map(([label, value]) => ({
+        label,
+        value,
+      }));
+    }
+
+    appendQueryHistory({
+      naturalText: sql,
+      sqlQuery: sql,
+      rowCount: outputRows.length,
+      createdAt: new Date().toISOString(),
+    });
+
+    return NextResponse.json({ sql, rows: outputRows });
+  } catch (err) {
+    console.error("RUN-QUERY ERROR:", err);
+    return NextResponse.json({ sql: "", rows: [] });
+  }
+}
