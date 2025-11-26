@@ -6,7 +6,6 @@
 
 ## 🧠 Overview  
 
-Conversational Analytics Assistant is an AI-powered dashboard that allows users to type natural language queries like:
 
 > “Tell me Starbucks expenses this month”
 
@@ -14,8 +13,6 @@ The system intelligently converts that text into:
 - **Real-time autocomplete suggestions**  
 - **AI-generated SQL queries**  
 - **Interactive data visualizations** (table, pie chart, bar graph)
-
-It recreates how modern BI tools (like Perplexity Analytics / ChatGPT BI) operate under the hood.
 
 ---
 
