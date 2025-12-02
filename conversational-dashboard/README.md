@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Natural Language SQL Autocomplete  
+### Natural Language → SQL → Interactive Analytics  
+**Built with Next.js, OpenAI GPT-4o-mini, and Recharts**
 
-## Getting Started
+---
 
-First, run the development server:
+## 🧠 Overview  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> “Tell me Starbucks expenses this month”
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The system intelligently converts that text into:  
+- **Real-time autocomplete suggestions**  
+- **AI-generated SQL queries**  
+- **Interactive data visualizations** (table, pie chart, bar graph)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Core Features
 
-To learn more about Next.js, take a look at the following resources:
+### 📝 1. Real-Time Sentence Autocomplete  
+As the user types, the `/api/nl-suggest` route gets triggered.  
+It uses:
+- User’s query history  
+- Live input  
+- GPT-4o-mini (Responses API)  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This produces **4 smart natural-language completions**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🧮 2. AI SQL Autocomplete  
+After pressing **Send**, the `/api/sql-autocomplete` endpoint converts your sentence into **3 SQL queries**.
 
-## Deploy on Vercel
+### 🔍 3. SQL Execution Engine  
+The `/api/run-query` endpoint simulates SQL execution:  
+- Supports `SUM(amount)`  
+- `GROUP BY category`  
+- `merchant_name = 'X'` filters  
+- Uses a local in-memory dataset (`sampleData.ts`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📊 4. Results Visualization  
+The results page (`/results`) shows:  
+- Data **table**  
+- **Pie chart** view  
+- **Bar chart** view  
+- Summary stats (row count, labels, metrics)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 📚 5. Persistent User & Query History  
+Stored in `/data` directory:  
+- `userHistory.json` → for better NL autocomplete  
+- `queryHistory.json` → shows past SQL queries  
+
+Displayed in a right-side **History Drawer**.
+
+### ⚡ 6. Highly Optimized for Speed  
+Tested different LLMs:
+
+| Model | Result |
+|-------|--------|
+| **OpenAI GPT-4o-mini** | Fastest and most consistent |
+| Mistral Small 3.1 | Fast but slower than OpenAI |
+| GPT-4o-quick / highspeed | Unstable for autocomplete |
+
+Final choice: **GPT-4o-mini with Responses API**  
+✔ Less latency  
+✔ Clean JSON  
+✔ Perfect for real-time suggestions  
+
+---
