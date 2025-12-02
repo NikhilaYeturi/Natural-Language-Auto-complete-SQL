@@ -199,6 +199,11 @@ export default function Home() {
           createdAt: new Date().toISOString(),
         }),
       });
+      // Optimistically update UI so newest appears first without needing to re-open history
+      setUserHistory((prev) => [
+        { naturalText: clean, createdAt: new Date().toISOString(), id: `u-${Date.now()}` },
+        ...prev,
+      ]);
     } catch {}
 
     try {

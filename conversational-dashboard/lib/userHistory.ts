@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const FILE = path.join(process.cwd(), "history.json");
+const FILE = path.join(process.cwd(), "data", "userHistory.json");
 
 export async function getHistory() {
   if (!fs.existsSync(FILE)) return [];

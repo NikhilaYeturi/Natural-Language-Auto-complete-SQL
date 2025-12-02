@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
-const FILE = path.join(process.cwd(), "data", "userHistory.json");
+const FILE = path.join(process.cwd(), "data", "userHistory.json"); // user history file
 
 export async function POST(req: Request) {
   const { naturalText } = await req.json();
@@ -22,10 +22,11 @@ export async function POST(req: Request) {
   }
 
   const entry = { naturalText, createdAt: new Date().toISOString(), id: `u-${Date.now()}` };
-  existing.push(entry);
+  // Prepend newest entries so file keeps newest-first order
+  existing.unshift(entry);
 
-  fs.mkdirSync(path.dirname(FILE), { recursive: true });
-  fs.writeFileSync(FILE, JSON.stringify(existing, null, 2), "utf8");
+  fs.mkdirSync(path.dirname(FILE), { recursive: true }); // ensure directory exists
+  fs.writeFileSync(FILE, JSON.stringify(existing, null, 2), "utf8"); // write updated history back to file
 
   return NextResponse.json({ ok: true });
 }
@@ -36,12 +37,13 @@ export async function GET() {
 
     const raw = JSON.parse(fs.readFileSync(FILE, "utf8"));
 
+    // Normalize entries and ensure we return newest-first
     const out = (Array.isArray(raw) ? raw : []).map((entry: any, idx: number) => {
       if (typeof entry === "string") {
-        return { naturalText: entry, createdAt: new Date().toISOString(), id: `u-${idx}` };
+        return { naturalText: entry, createdAt: new Date().toISOString(), id: `u-${idx}` }; // migrate legacy string to object
       }
       return { naturalText: entry.naturalText || "", createdAt: entry.createdAt || new Date().toISOString(), id: entry.id || `u-${idx}` };
-    });
+    }).sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()); // sort by createdAt descending
 
     return NextResponse.json(out);
   } catch (err) {

@@ -6,10 +6,10 @@ export async function POST(req: Request) {
   try {
     // Accept either { query } (older) or { sql } (frontend uses this)
     const body = await req.json();
-    const sql = (body && (body.sql || body.query)) || "";
+    const sql = (body && (body.sql || body.query)) || ""; // extract SQL query
 
     if (!sql || typeof sql !== "string") {
-      return NextResponse.json({ sql: "", rows: [] });
+      return NextResponse.json({ sql: "", rows: [] }); // handle empty or invalid SQL
     }
 
     let rows = [...SAMPLE_TRANSACTIONS];
@@ -19,35 +19,35 @@ export async function POST(req: Request) {
     // Also support queries that filter by category (e.g. category = 'coffee')
     
     if (/merchant_name\s+in\s*\(([^)]+)\)/i.test(sql)) {
-      const match = sql.match(/merchant_name\s+in\s*\(([^)]+)\)/i);
+      const match = sql.match(/merchant_name\s+in\s*\(([^)]+)\)/i); // extract list
       if (match) {
         const list = match[1]
           .split(',')
           .map((s) => s.replace(/['"\s]/g, '').toLowerCase())
           .filter(Boolean);
 
-        outputRows = rows.filter((r) => list.includes(String(r.merchant_name).toLowerCase()));
+        outputRows = rows.filter((r) => list.includes(String(r.merchant_name).toLowerCase())); // filter rows by merchant_name
       }
     } else if (/merchant_name\s*=\s*'([^']+)'/i.test(sql)) {
       const match = sql.match(/merchant_name\s*=\s*'([^']+)'/i);
       if (match) {
         const merchant = match[1].toLowerCase();
-        outputRows = rows.filter((r) => String(r.merchant_name).toLowerCase() === merchant);
+        outputRows = rows.filter((r) => String(r.merchant_name).toLowerCase() === merchant); 
       }
     } else if (/category\s*=\s*'([^']+)'/i.test(sql) || /category\s+in\s*\(([^)]+)\)/i.test(sql)) {
       // If SQL filters by category, try mapping category terms to merchant_name(s).
       // Example: category = 'coffee' -> map to ['Starbucks']
-      const categoryInMatch = sql.match(/category\s+in\s*\(([^)]+)\)/i);
+      const categoryInMatch = sql.match(/category\s+in\s*\(([^)]+)\)/i); // extract list of categories
       let categories: string[] = [];
 
       if (categoryInMatch) {
         categories = categoryInMatch[1]
           .split(',')
           .map((s) => s.replace(/['"\s]/g, '').toLowerCase())
-          .filter(Boolean);
+          .filter(Boolean); // list of categories
       } else {
         const m = sql.match(/category\s*=\s*'([^']+)'/i);
-        if (m) categories = [m[1].toLowerCase()];
+        if (m) categories = [m[1].toLowerCase()]; // single category
       }
 
       // Simple mapping table: map generic categories to merchant names
@@ -55,10 +55,10 @@ export async function POST(req: Request) {
         coffee: ['Starbucks'],
         uber: ['Uber'],
         groceries: ['Target', 'Whole Foods', 'Walmart'],
-      };
+      }; // simple mapping table
 
       // Collect merchant candidates from mapped categories
-      const mappedMerchants = categories.flatMap((c) => CATEGORY_TO_MERCHANTS[c] || []);
+      const mappedMerchants = categories.flatMap((c) => CATEGORY_TO_MERCHANTS[c] || []); // get mapped merchants
 
       if (mappedMerchants.length > 0) {
         const lowerSet = mappedMerchants.map((m) => m.toLowerCase());
@@ -67,14 +67,14 @@ export async function POST(req: Request) {
         // fallback: filter by the category field itself
         outputRows = rows.filter((r) => categories.includes(String(r.category).toLowerCase()));
       }
-    }
+    } // end category filtering
 
     // SUM(amount)
     if (/sum\s*\(\s*amount\s*\)/i.test(sql)) {
       const total = outputRows.reduce(
         (sum, r) => sum + Number(r.amount),
         0
-      );
+      ); // calculate total amount
 
       outputRows = [
         { label: "total", value: total }
@@ -100,7 +100,7 @@ export async function POST(req: Request) {
       sqlQuery: sql,
       rowCount: outputRows.length,
       createdAt: new Date().toISOString(),
-    });
+    }); // save to query history
 
     return NextResponse.json({ sql, rows: outputRows });
   } catch (err) {

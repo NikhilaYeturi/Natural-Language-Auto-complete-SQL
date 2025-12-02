@@ -1,5 +1,100 @@
 [
   {
+    "naturalText": "Give me expenses for the month",
+    "createdAt": "2025-12-02T19:32:04.949Z",
+    "id": "u-1764703924949"
+  },
+  {
+    "naturalText": "Give me the expenses of netflix",
+    "createdAt": "2025-12-02T19:31:35.619Z",
+    "id": "u-1764703895619"
+  },
+  {
+    "naturalText": "Give me the expenses of my bills",
+    "createdAt": "2025-12-02T19:30:48.587Z",
+    "id": "u-1764703848587"
+  },
+  {
+    "naturalText": "Tell me the expenses of my groceries",
+    "createdAt": "2025-12-02T19:30:24.995Z",
+    "id": "u-1764703824995"
+  },
+  {
+    "naturalText": "Tell me t he expenses of my subscriptions",
+    "createdAt": "2025-12-02T19:29:58.211Z",
+    "id": "u-1764703798211"
+  },
+  {
+    "naturalText": "Tell me the expenses of my groceries",
+    "createdAt": "2025-12-02T19:29:41.715Z",
+    "id": "u-1764703781715"
+  },
+  {
+    "naturalText": "Tell me the expenses of starbucks",
+    "createdAt": "2025-12-02T19:29:22.000Z",
+    "id": "u-1764703762000"
+  },
+  {
+    "naturalText": "Tell me the expenses of my groceries",
+    "createdAt": "2025-12-02T19:25:57.580Z",
+    "id": "u-1764703557580"
+  },
+  {
+    "naturalText": "Tell me the expenses of uber",
+    "createdAt": "2025-12-02T19:25:40.082Z",
+    "id": "u-1764703540082"
+  },
+  {
+    "naturalText": "Tell me expenses of groceries",
+    "createdAt": "2025-12-02T18:44:44.358Z",
+    "id": "u-1764701084359"
+  },
+  {
+    "naturalText": "Tell me all expenses of groceries",
+    "createdAt": "2025-12-02T18:40:33.433Z",
+    "id": "u-1764700833433"
+  },
+  {
+    "naturalText": "Give me all expenses except starbucks",
+    "createdAt": "2025-12-02T18:40:15.470Z",
+    "id": "u-1764700815470"
+  },
+  {
+    "naturalText": "Tell me all my wastage on shopping",
+    "createdAt": "2025-12-02T18:32:39.076Z",
+    "id": "u-1764700359076"
+  },
+  {
+    "naturalText": "Tell me expenses of my groceries",
+    "createdAt": "2025-12-02T18:32:09.557Z",
+    "id": "u-1764700329557"
+  },
+  {
+    "naturalText": "How much money did i waste on shopping this month?",
+    "createdAt": "2025-12-02T18:30:12.328Z",
+    "id": "u-1764700212328"
+  },
+  {
+    "naturalText": "Give me expenses of uber",
+    "createdAt": "2025-12-02T18:29:19.783Z",
+    "id": "u-1764700159784"
+  },
+  {
+    "naturalText": "Tell me all the expenses of my groceries",
+    "createdAt": "2025-12-02T18:25:00.232Z",
+    "id": "u-1764699900232"
+  },
+  {
+    "naturalText": "Tell me expenses of uber",
+    "createdAt": "2025-12-02T18:23:43.415Z",
+    "id": "u-1764699823415"
+  },
+  {
+    "naturalText": "Tell me expenses of my groceries",
+    "createdAt": "2025-12-02T18:13:39.189Z",
+    "id": "u-1764699219189"
+  },
+  {
     "naturalText": "Tell me all expenses of uber",
     "createdAt": "2025-11-26T05:04:31.147Z",
     "id": "u-0"
@@ -964,27 +1059,16 @@
     "createdAt": "2025-11-26T05:07:43.148Z",
     "id": "u-1764133663148"
   },
-  "Give me all expenses",
-  "Give me",
-  "Tell me al",
-  "Tell me all expenses of",
-  "Give starbucks expenses",
-  "Give starbucks expenses",
-  "Give starbucks expenses",
-  "Give me all expenses",
-  "Give me all expenses",
-  "Give me all expenses",
-  "Give me all expenses of starbucks",
-  "Give me expenses of starbucks",
-  "Give me expenses of starbucks",
-  "Give me expenses of starbucks",
-  "give me",
-  "give me expenses of",
-  "give me expenses of u",
-  "give me expenses of ub",
-  "give me expenses of uber",
-  "give me expenses of uber",
-  "give me expenses of uber",
+  {
+    "naturalText": "Give me all expenses except uber",
+    "createdAt": "2025-11-26T05:23:15.015Z",
+    "id": "u-1764133395015"
+  },
+  {
+    "naturalText": "Give me all expenses except starbucks",
+    "createdAt": "2025-11-26T05:24:20.015Z",
+    "id": "u-1764133660015"
+  },
   {
     "naturalText": "Give me all expenses",
     "createdAt": "2025-11-26T05:25:25.015Z",
@@ -1309,5 +1393,100 @@
     "naturalText": "Give me expenses on my shopping expenses",
     "createdAt": "2025-11-26T07:02:24.837Z",
     "id": "u-1764140544837"
+  },
+  {
+    "naturalText": "Give me expense of starbucks",
+    "createdAt": "2025-12-02T16:06:24.570Z",
+    "id": "u-1764691584570"
+  },
+  {
+    "naturalText": "Tell me the expenses on my entertainment",
+    "createdAt": "2025-12-02T16:07:05.289Z",
+    "id": "u-1764691625289"
+  },
+  {
+    "naturalText": "tell me the expenses of uber",
+    "createdAt": "2025-12-02T16:07:26.642Z",
+    "id": "u-1764691646642"
+  },
+  {
+    "naturalText": "tell me all expenses",
+    "createdAt": "2025-12-02T16:07:42.400Z",
+    "id": "u-1764691662400"
+  },
+  {
+    "naturalText": "tell me all expenses of subscription on my subscriptions",
+    "createdAt": "2025-12-02T16:08:09.066Z",
+    "id": "u-1764691689066"
+  },
+  {
+    "naturalText": "tell me the total expenses for this month",
+    "createdAt": "2025-12-02T16:08:26.398Z",
+    "id": "u-1764691706398"
+  },
+  {
+    "naturalText": "Tell me expenses of my travel expenses",
+    "createdAt": "2025-12-02T16:13:52.937Z",
+    "id": "u-1764692032937"
+  },
+  {
+    "naturalText": "tell me my expenses of uber",
+    "createdAt": "2025-12-02T16:14:09.570Z",
+    "id": "u-1764692049570"
+  },
+  {
+    "naturalText": "Tell me expenses on my groceries",
+    "createdAt": "2025-12-02T16:23:47.065Z",
+    "id": "u-1764692627066"
+  },
+  {
+    "naturalText": "Tell me expenses of netflix",
+    "createdAt": "2025-12-02T17:01:33.674Z",
+    "id": "u-1764694893674"
+  },
+  {
+    "naturalText": "Tell me expenses of last week",
+    "createdAt": "2025-12-02T17:01:50.620Z",
+    "id": "u-1764694910620"
+  },
+  {
+    "naturalText": "Tell me this week expenses",
+    "createdAt": "2025-12-02T17:02:12.236Z",
+    "id": "u-1764694932236"
+  },
+  {
+    "naturalText": "Tell me the expenses of my shopping",
+    "createdAt": "2025-12-02T17:02:46.710Z",
+    "id": "u-1764694966710"
+  },
+  {
+    "naturalText": "tell me expenses of my dining out",
+    "createdAt": "2025-12-02T17:05:32.078Z",
+    "id": "u-1764695132078"
+  },
+  {
+    "naturalText": "tell me expenses of my entertainment",
+    "createdAt": "2025-12-02T17:06:44.226Z",
+    "id": "u-1764695204226"
+  },
+  {
+    "naturalText": "Tell me all expenses",
+    "createdAt": "2025-12-02T17:06:59.575Z",
+    "id": "u-1764695219575"
+  },
+  {
+    "naturalText": "Tell me the expenses of starbucks this week",
+    "createdAt": "2025-12-02T18:08:41.589Z",
+    "id": "u-1764698921589"
+  },
+  {
+    "naturalText": "Tell me expenses of target",
+    "createdAt": "2025-12-02T18:09:01.671Z",
+    "id": "u-1764698941672"
+  },
+  {
+    "naturalText": "huuhhhhhh",
+    "createdAt": "2025-12-02T18:09:28.181Z",
+    "id": "u-1764698968181"
   }
 ]

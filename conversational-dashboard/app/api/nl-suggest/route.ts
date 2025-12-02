@@ -5,16 +5,16 @@ import path from "path";
 
 // FASTEST API
 const client = new OpenAI({
-  apiKey: process.env.OPENAI_KEY,
+  apiKey: process.env.OPENAI_KEY, // OPENAI_KEY is set in environment variables
 });
 
 // Cache for 30 sec
-const CACHE_TTL_MS = 30000;
-const cache = new Map();
+const CACHE_TTL_MS = 30000; // 30 seconds
+const cache = new Map(); // in-memory cache
 
-const FILE = path.join(process.cwd(), "data", "userHistory.json");
+const FILE = path.join(process.cwd(), "data", "userHistory.json"); // user history file
 
-function getCached(key: string) {
+function getCached(key: string) { // get from cache with expiry check
   const entry = cache.get(key);
   if (!entry) return null;
   if (Date.now() > entry.expiresAt) {
@@ -25,11 +25,11 @@ function getCached(key: string) {
 }
 
 function setCached(key: string, value: any) {
-  cache.set(key, { value, expiresAt: Date.now() + CACHE_TTL_MS });
+  cache.set(key, { value, expiresAt: Date.now() + CACHE_TTL_MS }); // set with expiry
 }
 
 export async function POST(req: Request) {
-  const { userInput } = await req.json();
+  const { userInput } = await req.json(); // extract userInput from request body
 
   if (!userInput || userInput.trim().length < 3) {
     return NextResponse.json([]);
@@ -83,7 +83,7 @@ Rules:
     const resp = await client.responses.create({
       model: "gpt-4o-mini",
       input: prompt,
-      temperature: 0.2,
+      temperature: 0.4,
     });
 
     const text = resp.output_text.trim();
