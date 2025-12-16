@@ -24,13 +24,3 @@ Instead of directly converting text to SQL, the system follows a multi-stage pip
 4. **Q-Learning–based optimization**
 5. **Converged, semantically correct SQL**
 
-Example:
-
-> “Get all Starbucks and Uber transaction expenses”
-
-The system converges to:
-
-```sql
-SELECT * 
-FROM transactions 
-WHERE merchant_name IN ('Starbucks', 'Uber');
