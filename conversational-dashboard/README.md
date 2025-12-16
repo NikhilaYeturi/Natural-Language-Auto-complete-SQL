@@ -1,4 +1,4 @@
-# Conversational SQL Analyst  
+# OptimizeSQLQuery
 ### Natural Language → Objective Function → Reinforcement-Learned SQL
 
 A conversational analytics system that transforms natural language questions into **correct, semantically valid, and optimized SQL queries** using a **feedback-control reinforcement learning loop** inspired by RunRL / Qwen-style architectures.
