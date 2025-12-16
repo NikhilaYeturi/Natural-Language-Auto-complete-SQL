@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "updatedAt": "2025-12-16T08:44:16.884Z",
+  "hyperparams": {
+    "alpha": 0.1,
+    "gamma": 0.9,
+    "epsilon": 0.19117791567151193,
+    "epsilonDecay": 0.995,
+    "epsilonMin": 0.05,
+    "maxQTableSize": 10000,
+    "maxExperiences": 1000
+  },
+  "qtable": {
+    "*||merchant_name = 'not Starbucks'||||0||0||eb5c61b5": {
+      "llm_policy": 11.995000000000001
+    },
+    "*||||||0||0||45740de2": {
+      "llm_policy": 27.345461854649916,
+      "add_agg": 6.045000000000001,
+      "add_where": 3.5450000000000004
+    },
+    "*||merchant_name = 'excluding Starbucks'||||0||0||eb5c61b5": {
+      "llm_policy": 11.995000000000001
+    },
+    "*||merchant_name = 'excluding Starbucks'||||0||0||baea83c2": {
+      "llm_policy": 11.995000000000001
+    },
+    "*||merchant_name = 'excluding Starbucks'||||0||0||2c0f3a08": {
+      "llm_policy": 36.884586505,
+      "modify_where": 8.545
+    },
+    "*||merchant_name IN ('excluding Starbucks')||||0||0||2c0f3a08": {
+      "llm_policy": 12.26961278545
+    },
+    "*||merchant_name IN ('Uber', 'Starbucks')||||0||0||ff0cc87a": {
+      "llm_policy": 42.13395260995
+    },
+    "*||||||0||0||2494e2b2": {
+      "llm_policy": 39.884288005,
+      "fix_entity": 12.716753455000001
+    }
+  }
+}

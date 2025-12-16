@@ -1,5 +1,25 @@
 [
   {
+    "naturalText": "Tell me groceries expenses",
+    "createdAt": "2025-12-16T02:10:47.000Z",
+    "id": "u-1765851047000"
+  },
+  {
+    "naturalText": "Tell me the expenses of uber",
+    "createdAt": "2025-12-16T02:07:39.789Z",
+    "id": "u-1765850859789"
+  },
+  {
+    "naturalText": "Tell my expenses of my travel",
+    "createdAt": "2025-12-15T00:44:26.484Z",
+    "id": "u-1765759466484"
+  },
+  {
+    "naturalText": "tell me the expenses of my groceries",
+    "createdAt": "2025-12-15T00:43:44.422Z",
+    "id": "u-1765759424422"
+  },
+  {
     "naturalText": "Give me expenses for the month",
     "createdAt": "2025-12-02T19:32:04.949Z",
     "id": "u-1764703924949"

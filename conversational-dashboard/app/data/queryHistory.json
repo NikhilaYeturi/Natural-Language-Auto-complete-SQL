@@ -2266,5 +2266,317 @@
     "sqlQuery": "SELECT category, SUM(amount) AS total_expense FROM transactions WHERE created_at >= DATE_TRUNC('month', CURRENT_DATE) GROUP BY category",
     "rowCount": 5,
     "createdAt": "2025-12-02T19:32:11.060Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'groceries'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'groceries'",
+    "rowCount": 1,
+    "createdAt": "2025-12-15T00:43:52.514Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'groceries'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'groceries'",
+    "rowCount": 1,
+    "createdAt": "2025-12-15T00:43:55.638Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'travel'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'travel'",
+    "rowCount": 0,
+    "createdAt": "2025-12-15T00:44:31.825Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-12-16T02:07:51.289Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-12-16T02:07:56.719Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) AS total_groceries FROM transactions WHERE category = 'groceries'",
+    "sqlQuery": "SELECT SUM(amount) AS total_groceries FROM transactions WHERE category = 'groceries'",
+    "rowCount": 1,
+    "createdAt": "2025-12-16T02:11:13.395Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T03:46:13.531Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T03:51:02.879Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber, Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber, Starbucks'",
+    "rowCount": 0,
+    "createdAt": "2025-12-16T03:52:58.209Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber, Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber, Starbucks'",
+    "rowCount": 0,
+    "createdAt": "2025-12-16T03:53:05.239Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber'",
+    "rowCount": 1,
+    "createdAt": "2025-12-16T03:53:58.122Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber, Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber, Starbucks'",
+    "rowCount": 0,
+    "createdAt": "2025-12-16T03:54:07.686Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name in 'Uber, Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name in 'Uber, Starbucks'",
+    "rowCount": 10,
+    "createdAt": "2025-12-16T03:54:13.119Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T03:54:27.902Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T03:57:59.512Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Uber, Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Uber, Starbucks'",
+    "rowCount": 0,
+    "createdAt": "2025-12-16T03:58:30.664Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks, Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks, Uber'",
+    "rowCount": 0,
+    "createdAt": "2025-12-16T04:08:35.210Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T04:08:43.535Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks and Uber'\n",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks and Uber'\n",
+    "rowCount": 0,
+    "createdAt": "2025-12-16T04:12:24.338Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = '(Starbucks, Uber)'\n",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = '(Starbucks, Uber)'\n",
+    "rowCount": 0,
+    "createdAt": "2025-12-16T04:12:35.522Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name in (Starbucks, Uber)\n",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name in (Starbucks, Uber)\n",
+    "rowCount": 4,
+    "createdAt": "2025-12-16T04:12:44.248Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks, Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks, Uber'",
+    "rowCount": 0,
+    "createdAt": "2025-12-16T04:13:19.458Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T04:14:40.708Z"
+  },
+  {
+    "naturalText": "explain SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "explain SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T04:14:46.704Z"
+  },
+  {
+    "naturalText": "explain(SELECT * FROM transactions WHERE merchant_name = 'Starbucks')",
+    "sqlQuery": "explain(SELECT * FROM transactions WHERE merchant_name = 'Starbucks')",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T04:14:53.973Z"
+  },
+  {
+    "naturalText": "explain (SELECT * FROM transactions WHERE merchant_name = 'Starbucks')",
+    "sqlQuery": "explain (SELECT * FROM transactions WHERE merchant_name = 'Starbucks')",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T04:14:58.178Z"
+  },
+  {
+    "naturalText": "EXPLAIN SELECT * FROM orders WHERE Merchant = 'starbucks'\n",
+    "sqlQuery": "EXPLAIN SELECT * FROM orders WHERE Merchant = 'starbucks'\n",
+    "rowCount": 10,
+    "createdAt": "2025-12-16T04:15:18.925Z"
+  },
+  {
+    "naturalText": "EXPLAIN SELECT * FROM orders\n",
+    "sqlQuery": "EXPLAIN SELECT * FROM orders\n",
+    "rowCount": 10,
+    "createdAt": "2025-12-16T04:15:26.405Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T04:15:36.588Z"
+  },
+  {
+    "naturalText": "EXPLAIN SELECT * FROM transactions",
+    "sqlQuery": "EXPLAIN SELECT * FROM transactions",
+    "rowCount": 10,
+    "createdAt": "2025-12-16T04:15:45.476Z"
+  },
+  {
+    "naturalText": "EXPLAIN SELECT * FROM transactions where merchant_name = 'Starbucks'",
+    "sqlQuery": "EXPLAIN SELECT * FROM transactions where merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T04:17:15.060Z"
+  },
+  {
+    "naturalText": "EXPLAIN ANALYZE SELECT * FROM transactions where merchant_name = 'Starbucks'",
+    "sqlQuery": "EXPLAIN ANALYZE SELECT * FROM transactions where merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T04:17:41.768Z"
+  },
+  {
+    "naturalText": "EXPLAIN ANALYZE SELECT * FROM transactions",
+    "sqlQuery": "EXPLAIN ANALYZE SELECT * FROM transactions",
+    "rowCount": 10,
+    "createdAt": "2025-12-16T04:17:55.772Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions",
+    "sqlQuery": "SELECT * FROM transactions",
+    "rowCount": 10,
+    "createdAt": "2025-12-16T04:18:01.522Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks, Uber'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks, Uber'",
+    "rowCount": 0,
+    "createdAt": "2025-12-16T04:31:53.940Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Shopping'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Shopping'",
+    "rowCount": 0,
+    "createdAt": "2025-12-16T04:35:16.585Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'Shopping'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'Shopping'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T04:40:44.021Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Starbucks', 'Uber')",
+    "rowCount": 4,
+    "createdAt": "2025-12-16T04:41:59.731Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'Grocery'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'Grocery'",
+    "rowCount": 0,
+    "createdAt": "2025-12-16T05:56:28.989Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions LIMIT 10",
+    "sqlQuery": "SELECT * FROM transactions LIMIT 10",
+    "rowCount": 10,
+    "createdAt": "2025-12-16T05:56:46.482Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks', 'Target')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks', 'Target')",
+    "rowCount": 5,
+    "createdAt": "2025-12-16T06:20:37.604Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Target')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Target')",
+    "rowCount": 2,
+    "createdAt": "2025-12-16T06:21:21.458Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T06:22:26.221Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T06:25:19.324Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Target')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Target')",
+    "rowCount": 2,
+    "createdAt": "2025-12-16T06:27:48.292Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T06:31:17.241Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks')",
+    "rowCount": 4,
+    "createdAt": "2025-12-16T06:31:41.773Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name != 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name != 'Starbucks'",
+    "rowCount": 10,
+    "createdAt": "2025-12-16T07:22:15.859Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) FROM transactions;",
+    "sqlQuery": "SELECT SUM(amount) FROM transactions;",
+    "rowCount": 1,
+    "createdAt": "2025-12-16T07:22:35.620Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount > 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount > 0;",
+    "rowCount": 10,
+    "createdAt": "2025-12-16T07:28:21.255Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks')",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name IN ('Uber', 'Starbucks')",
+    "rowCount": 4,
+    "createdAt": "2025-12-16T07:33:14.353Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'Coffee'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'Coffee'",
+    "rowCount": 3,
+    "createdAt": "2025-12-16T08:44:22.585Z"
   }
 ]
