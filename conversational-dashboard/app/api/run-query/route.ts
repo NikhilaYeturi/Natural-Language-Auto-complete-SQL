@@ -35,8 +35,7 @@ export async function POST(req: Request) {
         outputRows = rows.filter((r) => String(r.merchant_name).toLowerCase() === merchant); 
       }
     } else if (/category\s*=\s*'([^']+)'/i.test(sql) || /category\s+in\s*\(([^)]+)\)/i.test(sql)) {
-      // If SQL filters by category, try mapping category terms to merchant_name(s).
-      // Example: category = 'coffee' -> map to ['Starbucks']
+      // Filter by category field directly from sample data
       const categoryInMatch = sql.match(/category\s+in\s*\(([^)]+)\)/i); // extract list of categories
       let categories: string[] = [];
 
@@ -50,23 +49,8 @@ export async function POST(req: Request) {
         if (m) categories = [m[1].toLowerCase()]; // single category
       }
 
-      // Simple mapping table: map generic categories to merchant names
-      const CATEGORY_TO_MERCHANTS: Record<string, string[]> = {
-        coffee: ['Starbucks'],
-        uber: ['Uber'],
-        groceries: ['Target', 'Whole Foods', 'Walmart'],
-      }; // simple mapping table
-
-      // Collect merchant candidates from mapped categories
-      const mappedMerchants = categories.flatMap((c) => CATEGORY_TO_MERCHANTS[c] || []); // get mapped merchants
-
-      if (mappedMerchants.length > 0) {
-        const lowerSet = mappedMerchants.map((m) => m.toLowerCase());
-        outputRows = rows.filter((r) => lowerSet.includes(String(r.merchant_name).toLowerCase()));
-      } else {
-        // fallback: filter by the category field itself
-        outputRows = rows.filter((r) => categories.includes(String(r.category).toLowerCase()));
-      }
+      // Filter by the category field directly
+      outputRows = rows.filter((r) => categories.includes(String(r.category).toLowerCase()));
     } // end category filtering
 
     // SUM(amount)

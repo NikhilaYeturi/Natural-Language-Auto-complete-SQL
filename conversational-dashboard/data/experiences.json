@@ -288,5 +288,1005 @@
     "timestamp": "2025-12-16T08:44:16.874Z",
     "objectiveHash": "2494e2b2",
     "id": "53fbac085ad605e5"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T15:18:35.954Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "0785a1709c76fb90"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T15:18:36.646Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "0b6d017cf309a6de"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T15:18:38.354Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "91ec429d779e6510"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T15:18:39.091Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "026bd7c8304423de"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T15:18:39.189Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "33ac3ca22f303e22"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:10:55.411Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "7b5cfa0359936e73"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:10:55.536Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "dd5f35265b4a700c"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:10:55.659Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "ec7afdaf9deeb9bf"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:10:55.894Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "4aa9768e14390e45"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:10:55.976Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "6297e3cab5e2c5c8"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||dc85eaaa",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||dc85eaaa",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:11:20.173Z",
+    "objectiveHash": "dc85eaaa",
+    "id": "3b465822242b062f"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||dc85eaaa",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||dc85eaaa",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:11:20.425Z",
+    "objectiveHash": "dc85eaaa",
+    "id": "ce0592578ddfdd99"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||dc85eaaa",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||dc85eaaa",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:11:20.659Z",
+    "objectiveHash": "dc85eaaa",
+    "id": "309cafe7b1e0c0c7"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||dc85eaaa",
+    "action": "add_agg",
+    "reward": 35,
+    "nextStateKey": "SUM(amount)||merchant_name = 'Starbucks'||SUM(AMOUNT)||0||0||dc85eaaa",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:11:20.673Z",
+    "objectiveHash": "dc85eaaa",
+    "id": "0f2a2523677e30fd"
+  },
+  {
+    "stateKey": "SUM(amount)||merchant_name = 'Starbucks'||SUM(AMOUNT)||0||0||dc85eaaa",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||dc85eaaa",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:11:20.802Z",
+    "objectiveHash": "dc85eaaa",
+    "id": "a186a7078ca51a9a"
+  },
+  {
+    "stateKey": "*||merchant_name IN ('Starbucks', 'uber')||||0||0||dc85eaaa",
+    "action": "llm_policy",
+    "reward": 85,
+    "nextStateKey": "*||merchant_name IN ('Starbucks', 'uber')||||0||0||dc85eaaa",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:11:34.119Z",
+    "objectiveHash": "dc85eaaa",
+    "id": "b6b59d174d0ac6b7"
+  },
+  {
+    "stateKey": "*||merchant_name IN ('Starbucks', 'uber')||||0||0||dc85eaaa",
+    "action": "llm_policy",
+    "reward": 85,
+    "nextStateKey": "*||merchant_name IN ('Starbucks', 'uber')||||0||0||dc85eaaa",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:11:34.232Z",
+    "objectiveHash": "dc85eaaa",
+    "id": "e803a99c57b7fcb2"
+  },
+  {
+    "stateKey": "*||merchant_name IN ('Starbucks', 'uber')||||0||0||dc85eaaa",
+    "action": "llm_policy",
+    "reward": 85,
+    "nextStateKey": "*||merchant_name IN ('Starbucks', 'uber')||||0||0||dc85eaaa",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:11:34.328Z",
+    "objectiveHash": "dc85eaaa",
+    "id": "3bb7ec5568b0b1d0"
+  },
+  {
+    "stateKey": "*||merchant_name IN ('Starbucks', 'uber')||||0||0||dc85eaaa",
+    "action": "add_order",
+    "reward": 85,
+    "nextStateKey": "*||merchant_name IN ('Starbucks', 'uber')||||0||1||dc85eaaa",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:11:34.330Z",
+    "objectiveHash": "dc85eaaa",
+    "id": "f3b766935cf43413"
+  },
+  {
+    "stateKey": "*||merchant_name IN ('Starbucks', 'uber')||||0||1||dc85eaaa",
+    "action": "llm_policy",
+    "reward": 85,
+    "nextStateKey": "*||merchant_name IN ('Starbucks', 'uber')||||0||0||dc85eaaa",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:11:34.420Z",
+    "objectiveHash": "dc85eaaa",
+    "id": "176fd2110b3be92d"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||||||0||0||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:12:00.412Z",
+    "objectiveHash": "2494e2b2",
+    "id": "2408dd241d101a2c"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||||||0||0||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:12:00.539Z",
+    "objectiveHash": "2494e2b2",
+    "id": "0511eb638dfc7b24"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||||||0||0||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:12:00.650Z",
+    "objectiveHash": "2494e2b2",
+    "id": "a99d966675b44429"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||||||0||0||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:12:00.757Z",
+    "objectiveHash": "2494e2b2",
+    "id": "47d71c7dda9b2e45"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "add_order",
+    "reward": 100,
+    "nextStateKey": "*||||||0||1||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-16T16:12:00.760Z",
+    "objectiveHash": "2494e2b2",
+    "id": "8d10ec22292f3606"
+  },
+  {
+    "stateKey": "*||||||0||0||c1dd3ac0",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||c1dd3ac0",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:34:56.503Z",
+    "objectiveHash": "c1dd3ac0",
+    "id": "ec4181eba6f01f82"
+  },
+  {
+    "stateKey": "*||||||0||0||c1dd3ac0",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||c1dd3ac0",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:34:56.617Z",
+    "objectiveHash": "c1dd3ac0",
+    "id": "927992b838f5c0e1"
+  },
+  {
+    "stateKey": "*||||||0||0||c1dd3ac0",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||c1dd3ac0",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:34:57.061Z",
+    "objectiveHash": "c1dd3ac0",
+    "id": "2f2297a9d8f9ec96"
+  },
+  {
+    "stateKey": "*||||||0||0||c1dd3ac0",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||c1dd3ac0",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:34:57.164Z",
+    "objectiveHash": "c1dd3ac0",
+    "id": "980ce81d325b7e3b"
+  },
+  {
+    "stateKey": "*||||||0||0||c1dd3ac0",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||c1dd3ac0",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:34:57.261Z",
+    "objectiveHash": "c1dd3ac0",
+    "id": "b8fbd0937f05aedf"
+  },
+  {
+    "stateKey": "*||||||0||0||c1dd3ac0",
+    "action": "add_order",
+    "reward": 40,
+    "nextStateKey": "*||||||0||1||c1dd3ac0",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:49:09.494Z",
+    "objectiveHash": "c1dd3ac0",
+    "id": "f296c38753ec5596"
+  },
+  {
+    "stateKey": "*||||||0||1||c1dd3ac0",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||c1dd3ac0",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:49:09.757Z",
+    "objectiveHash": "c1dd3ac0",
+    "id": "e8faf92e29ad37a8"
+  },
+  {
+    "stateKey": "*||||||0||0||c1dd3ac0",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||c1dd3ac0",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:49:09.886Z",
+    "objectiveHash": "c1dd3ac0",
+    "id": "3df65b3288a5d32f"
+  },
+  {
+    "stateKey": "*||||||0||0||c1dd3ac0",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||c1dd3ac0",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:49:09.970Z",
+    "objectiveHash": "c1dd3ac0",
+    "id": "edee974768d999c5"
+  },
+  {
+    "stateKey": "*||||||0||0||c1dd3ac0",
+    "action": "add_agg",
+    "reward": 25,
+    "nextStateKey": "SUM(amount)||||SUM(AMOUNT)||0||0||c1dd3ac0",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:49:09.984Z",
+    "objectiveHash": "c1dd3ac0",
+    "id": "e465f2849920b3da"
+  },
+  {
+    "stateKey": "*||||||0||0||256fcf9e",
+    "action": "add_where",
+    "reward": 35,
+    "nextStateKey": "*||amount > 0;||||0||0||256fcf9e",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:49:45.901Z",
+    "objectiveHash": "256fcf9e",
+    "id": "d035e17d464fe646"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||256fcf9e",
+    "action": "add_order",
+    "reward": 65,
+    "nextStateKey": "*||amount > 0;||||0||1||256fcf9e",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:49:45.910Z",
+    "objectiveHash": "256fcf9e",
+    "id": "349faf787b13a827"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||1||256fcf9e",
+    "action": "llm_policy",
+    "reward": 25,
+    "nextStateKey": "*||||||0||0||256fcf9e",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:49:46.224Z",
+    "objectiveHash": "256fcf9e",
+    "id": "d626804e01fe7acd"
+  },
+  {
+    "stateKey": "*||||||0||0||256fcf9e",
+    "action": "add_where",
+    "reward": 35,
+    "nextStateKey": "*||amount > 0;||||0||0||256fcf9e",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:49:46.236Z",
+    "objectiveHash": "256fcf9e",
+    "id": "7e0755ffe9b31284"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||256fcf9e",
+    "action": "add_order",
+    "reward": 65,
+    "nextStateKey": "*||amount > 0;||||0||1||256fcf9e",
+    "terminal": false,
+    "timestamp": "2025-12-16T16:49:46.243Z",
+    "objectiveHash": "256fcf9e",
+    "id": "0f44d4ba082be056"
+  },
+  {
+    "stateKey": "*||||||0||0||45740de2",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||45740de2",
+    "terminal": false,
+    "timestamp": "2025-12-16T18:54:03.771Z",
+    "objectiveHash": "45740de2",
+    "id": "7c100334561b9ba4"
+  },
+  {
+    "stateKey": "*||||||0||0||45740de2",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||45740de2",
+    "terminal": false,
+    "timestamp": "2025-12-16T18:54:04.314Z",
+    "objectiveHash": "45740de2",
+    "id": "0553507731cba04e"
+  },
+  {
+    "stateKey": "*||||||0||0||45740de2",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||45740de2",
+    "terminal": false,
+    "timestamp": "2025-12-16T18:54:04.842Z",
+    "objectiveHash": "45740de2",
+    "id": "64d2c3cf0b7b82aa"
+  },
+  {
+    "stateKey": "*||||||0||0||45740de2",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||45740de2",
+    "terminal": false,
+    "timestamp": "2025-12-16T18:54:04.932Z",
+    "objectiveHash": "45740de2",
+    "id": "33e85b055ee7160a"
+  },
+  {
+    "stateKey": "*||||||0||0||45740de2",
+    "action": "llm_policy",
+    "reward": 10,
+    "nextStateKey": "*||||||0||0||45740de2",
+    "terminal": false,
+    "timestamp": "2025-12-16T18:54:05.495Z",
+    "objectiveHash": "45740de2",
+    "id": "43e3ac297bd1d0bb"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T18:54:36.771Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "535178a6d3ee6262"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T18:54:38.300Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "63675c42f2a766a5"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T18:54:38.405Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "2722cac5b92e98eb"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T18:54:38.494Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "406eecc6615cfeb5"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T18:54:38.588Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "0afbaf9e7134b437"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T18:56:51.752Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "f73725c5f69ecac4"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T18:56:51.847Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "0c41c9e814619512"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "add_agg",
+    "reward": 35,
+    "nextStateKey": "SUM(amount)||merchant_name = 'Starbucks'||SUM(AMOUNT)||0||0||59a1f1dd",
+    "terminal": false,
+    "timestamp": "2025-12-16T18:56:51.853Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "abb905eac9429e84"
+  },
+  {
+    "stateKey": "SUM(amount)||merchant_name = 'Starbucks'||SUM(AMOUNT)||0||0||59a1f1dd",
+    "action": "remove_agg",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T18:56:51.860Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "1fe35bc2c4552eac"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T18:56:51.986Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "fd23599734882e54"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||||||0||0||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:04:45.652Z",
+    "objectiveHash": "2494e2b2",
+    "id": "89e34ecada5f4030"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||||||0||0||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:04:45.770Z",
+    "objectiveHash": "2494e2b2",
+    "id": "624936e7a4b003a1"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "modify_where",
+    "reward": 100,
+    "nextStateKey": "*||||||0||0||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:04:45.782Z",
+    "objectiveHash": "2494e2b2",
+    "id": "354691ec76e1ab8c"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||||||0||0||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:04:45.899Z",
+    "objectiveHash": "2494e2b2",
+    "id": "7e15f09d36e0edb3"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||||||0||0||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:04:46.000Z",
+    "objectiveHash": "2494e2b2",
+    "id": "003c9462e797336c"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:05:24.889Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "09c7f347faa051da"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:05:24.986Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "2ecc59bef897a4c1"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:05:25.093Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "fe25708e22037e0f"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:05:25.212Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "aa22e6fff549d4fb"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:05:25.301Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "9fd0d504a33ed9ca"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:08:43.120Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "1fd4f6106618fc57"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:08:43.248Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "234ddf77ec7fa2db"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:08:43.340Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "8e473b7ee4b1aec0"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:08:43.454Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "ab127da0f95563c6"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:08:43.564Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "b0b585224d3763c5"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:19:39.319Z",
+    "objectiveHash": "e25f560f",
+    "id": "48c2fb2ba4e0195a"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:19:39.589Z",
+    "objectiveHash": "e25f560f",
+    "id": "2c33990438301cfe"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "action": "add_agg",
+    "reward": 35,
+    "nextStateKey": "SUM(amount)||merchant_name = 'Uber'||SUM(AMOUNT)||0||0||e25f560f",
+    "terminal": false,
+    "timestamp": "2025-12-16T19:19:39.594Z",
+    "objectiveHash": "e25f560f",
+    "id": "6479d3e4b855a526"
+  },
+  {
+    "stateKey": "SUM(amount)||merchant_name = 'Uber'||SUM(AMOUNT)||0||0||e25f560f",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:19:39.740Z",
+    "objectiveHash": "e25f560f",
+    "id": "ac95170edd80e048"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:19:39.826Z",
+    "objectiveHash": "e25f560f",
+    "id": "994d90a6cd32d23c"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:28:53.393Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "7508e5f2668b228c"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "add_order",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||1||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:28:53.407Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "9cd37dff637f3412"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||1||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:28:53.606Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "b545146dcc0224bf"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:28:53.702Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "ed3a4974a81b7af5"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:28:53.927Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "18d19e66c4842cc9"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:28:54.761Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "9a30b7df88681b07"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:28:54.886Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "b90d1e22289636b4"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:28:54.998Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "74a27fe2f284baaf"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:28:55.092Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "e7c9a4df09dd680d"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:28:55.193Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "7fefc513e1d8a5ad"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:33:27.187Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "2991d3abb8849c98"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:33:27.443Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "d5e1b8cc6b880457"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:33:27.541Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "f089b9bbb14f8dd5"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:33:27.645Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "e939c02190db43e9"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:33:27.756Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "1503609e5656b8be"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:34:02.068Z",
+    "objectiveHash": "e25f560f",
+    "id": "10f5b44c4f9cc07b"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:34:02.187Z",
+    "objectiveHash": "e25f560f",
+    "id": "9e7e4f68c7ec075f"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:34:02.293Z",
+    "objectiveHash": "e25f560f",
+    "id": "705f96ee7ca4e986"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:34:02.375Z",
+    "objectiveHash": "e25f560f",
+    "id": "fc40ef13fa4c2423"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "action": "llm_policy",
+    "reward": 100,
+    "nextStateKey": "*||merchant_name = 'Uber'||||0||0||e25f560f",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:34:02.472Z",
+    "objectiveHash": "e25f560f",
+    "id": "48e37e740a553c7c"
+  },
+  {
+    "stateKey": "*||merchant_name IN ('Uber', 'Starbucks')||||0||0||ff0cc87a",
+    "action": "add_order",
+    "reward": 85,
+    "nextStateKey": "*||merchant_name IN ('Uber', 'Starbucks')||||0||1||ff0cc87a",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:41:50.425Z",
+    "objectiveHash": "ff0cc87a",
+    "id": "ada7cea5dee0022b"
+  },
+  {
+    "stateKey": "*||merchant_name IN ('Uber', 'Starbucks')||||0||1||ff0cc87a",
+    "action": "llm_policy",
+    "reward": 85,
+    "nextStateKey": "*||merchant_name IN ('Uber', 'Starbucks')||||0||0||ff0cc87a",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:41:50.525Z",
+    "objectiveHash": "ff0cc87a",
+    "id": "5d13c9ff9a465211"
+  },
+  {
+    "stateKey": "*||merchant_name IN ('Uber', 'Starbucks')||||0||0||ff0cc87a",
+    "action": "llm_policy",
+    "reward": 85,
+    "nextStateKey": "*||merchant_name IN ('Uber', 'Starbucks')||||0||0||ff0cc87a",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:41:50.615Z",
+    "objectiveHash": "ff0cc87a",
+    "id": "575043570d97e677"
+  },
+  {
+    "stateKey": "*||merchant_name IN ('Uber', 'Starbucks')||||0||0||ff0cc87a",
+    "action": "llm_policy",
+    "reward": 85,
+    "nextStateKey": "*||merchant_name IN ('Uber', 'Starbucks')||||0||0||ff0cc87a",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:41:50.727Z",
+    "objectiveHash": "ff0cc87a",
+    "id": "83ec471ca3f6c573"
+  },
+  {
+    "stateKey": "*||merchant_name IN ('Uber', 'Starbucks')||||0||0||ff0cc87a",
+    "action": "llm_policy",
+    "reward": 85,
+    "nextStateKey": "*||merchant_name IN ('Uber', 'Starbucks')||||0||0||ff0cc87a",
+    "terminal": true,
+    "timestamp": "2025-12-16T19:41:50.830Z",
+    "objectiveHash": "ff0cc87a",
+    "id": "5a1d572da29737bb"
   }
 ]

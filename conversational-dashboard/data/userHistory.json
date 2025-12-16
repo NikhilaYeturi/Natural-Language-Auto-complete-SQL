@@ -1,5 +1,10 @@
 [
   {
+    "naturalText": "Give me uber and starbucks expenses",
+    "createdAt": "2025-12-16T19:41:39.997Z",
+    "id": "u-1765914099997"
+  },
+  {
     "naturalText": "Tell me groceries expenses",
     "createdAt": "2025-12-16T02:10:47.000Z",
     "id": "u-1765851047000"

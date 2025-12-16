@@ -27,10 +27,29 @@ export default function Home() {
   const [objectiveAst, setObjectiveAst] = useState<any | null>(null);
   const [objectiveLocked, setObjectiveLocked] = useState(false);
 
- 
+
      //SQL
   const [sql, setSql] = useState("");
   const [queryResults, setQueryResults] = useState<any[] | null>(null);
+
+  // HISTORY
+  const [history, setHistory] = useState<any[]>([]);
+  const [showHistory, setShowHistory] = useState(false);
+
+  // LOAD HISTORY
+  const loadHistory = async () => {
+    try {
+      const res = await fetch("/api/store-user-history");
+      const data = await res.json();
+      setHistory(data);
+    } catch (err) {
+      console.error("Failed to load history:", err);
+    }
+  };
+
+  useEffect(() => {
+    loadHistory();
+  }, []);
 
      //SEND / ENTER HANDLER
 
@@ -41,6 +60,17 @@ export default function Home() {
     setConversation((prev) => [...prev, { role: "user", text: clean }]);
     setUserInput("");
     setLoading(true);
+
+    // Save to user history
+    try {
+      await fetch("/api/store-user-history", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ naturalText: clean }),
+      });
+    } catch (err) {
+      console.error("Failed to save user history:", err);
+    }
 
     try {
       const res = await fetch("/api/objective/generate", {
@@ -55,6 +85,7 @@ export default function Home() {
       const data = await res.json();
 
       setObjectiveAst(data.objective);
+      setObjectiveLocked(false); // Reset lock state for new objective
       setStage("objective");
 
       setConversation((prev) => [
@@ -72,6 +103,7 @@ export default function Home() {
     }
 
     setLoading(false);
+    loadHistory(); // Reload history after sending query
   };
 
   const handleKeyDown = async (e: any) => {
@@ -118,15 +150,59 @@ export default function Home() {
   };
 //UI from here
   return (
-    <div className="min-h-screen bg-white text-gray-900 p-6">
-      <div className="text-center mb-6">
-        <h1 className="text-4xl font-bold mb-2 text-black">Quill chat</h1>
-        <p className="text-gray-500 text-sm">Ask me anything about objectiveFunctions and SQL optimization</p>
+    <div className="min-h-screen bg-white text-gray-900 p-6 flex">
+      {/* HISTORY SIDEBAR */}
+      <div className={`transition-all duration-300 ${showHistory ? "w-64 mr-4" : "w-0"} overflow-hidden`}>
+        <div className="bg-white rounded-2xl shadow-lg border border-gray-200 h-full p-4">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-black">History</h2>
+            <button
+              onClick={() => setShowHistory(false)}
+              className="text-gray-500 hover:text-gray-700"
+            >
+              ✕
+            </button>
+          </div>
+          <div className="space-y-2 overflow-y-auto max-h-[calc(100vh-200px)]">
+            {history.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => {
+                  setUserInput(item.naturalText);
+                  setShowHistory(false);
+                }}
+                className="w-full text-left p-3 rounded-lg hover:bg-gray-100 transition-colors text-sm"
+              >
+                <p className="text-gray-900 truncate">{item.naturalText}</p>
+                <p className="text-gray-400 text-xs mt-1">
+                  {new Date(item.createdAt).toLocaleDateString()}
+                </p>
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
+      {/* MAIN CONTENT */}
+      <div className="flex-1">
+        <div className="text-center mb-6">
+          <div className="flex items-center justify-center gap-4">
+            {!showHistory && (
+              <button
+                onClick={() => setShowHistory(true)}
+                className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm transition-colors"
+              >
+                History
+              </button>
+            )}
+            <h1 className="text-4xl font-bold text-black">Quill chat</h1>
+          </div>
+          <p className="text-gray-500 text-sm mt-2">Ask me anything about objectiveFunctions and SQL optimization</p>
+        </div>
+
        <div className={`max-w-7xl mx-auto ${objectiveAst || stage === "sql" ? "flex gap-6" : "flex justify-center"}`}>
-        <div className={`bg-white rounded-3xl shadow-lg border border-gray-200 overflow-hidden transition-all ${objectiveAst || stage === "sql" ? "flex-1" : "w-full max-w-3xl"}`}>
-          <div className="h-[500px] overflow-y-auto p-6 space-y-4">
+        <div className={`bg-white rounded-3xl shadow-lg border border-gray-200 overflow-hidden transition-all flex flex-col ${objectiveAst || stage === "sql" ? "flex-1" : "w-full max-w-3xl"}`}>
+          <div className="flex-1 overflow-y-auto p-6 space-y-4 min-h-[400px] max-h-[600px]">
             {conversation.map((msg, idx) => (
               <div
                 key={idx}
@@ -144,9 +220,18 @@ export default function Home() {
             ))}
           </div>
 
+          {stage === "optimizing" && (
+            <div className="px-6 pb-3">
+              <div className="flex items-center gap-2 px-3 py-2 bg-amber-50 border border-amber-200 rounded-lg text-amber-700 text-sm">
+                <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
+                Optimizing query...
+              </div>
+            </div>
+          )}
+
           {/* Input Area */}
-          <div className="border-t border-gray-200 p-6 bg-gray-50">
-            <div className="flex gap-3 items-end">
+          <div className="border-t border-gray-200 p-4 bg-gray-50">
+            <div className="flex gap-2 items-end">
               <textarea
                 ref={textareaRef}
                 value={userInput}
@@ -154,27 +239,17 @@ export default function Home() {
                 onKeyDown={handleKeyDown}
                 placeholder="Send a message..."
                 rows={1}
-                className="flex-1 p-4 rounded-xl bg-white border border-gray-300 focus:border-blue-500 focus:outline-none resize-none transition-all text-gray-900"
-                disabled={objectiveLocked}
+                className="flex-1 p-3 rounded-xl bg-white border border-gray-300 focus:border-blue-500 focus:outline-none resize-none transition-all text-gray-900 text-sm"
               />
               <button
                 onClick={handleSend}
-                disabled={loading || objectiveLocked}
-                className="px-6 py-4 bg-black hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-xl font-medium transition-colors text-white"
+                disabled={loading}
+                className="px-5 py-3 bg-black hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-xl font-medium transition-colors text-white text-sm"
               >
                 {loading ? "..." : "Send"}
               </button>
             </div>
           </div>
-
-          {stage === "optimizing" && (
-            <div className="px-6 pb-4">
-              <div className="flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 rounded-lg text-amber-700 text-sm">
-                <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
-                Optimizing query...
-              </div>
-            </div>
-          )}
         </div>
 
         {(objectiveAst || stage === "sql") && (
@@ -234,6 +309,7 @@ export default function Home() {
             )}
           </div>
         )}
+      </div>
       </div>
     </div>
   );
