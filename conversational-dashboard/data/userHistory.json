@@ -1,5 +1,75 @@
 [
   {
+    "naturalText": "give me all expenses sum",
+    "createdAt": "2025-12-17T01:48:09.974Z",
+    "id": "u-1765936089974"
+  },
+  {
+    "naturalText": "Give me expenses all",
+    "createdAt": "2025-12-17T01:47:39.590Z",
+    "id": "u-1765936059590"
+  },
+  {
+    "naturalText": "Give me all expenses of starbucks",
+    "createdAt": "2025-12-17T01:44:35.051Z",
+    "id": "u-1765935875051"
+  },
+  {
+    "naturalText": "Give me all expenses of coffee",
+    "createdAt": "2025-12-17T01:36:53.418Z",
+    "id": "u-1765935413421"
+  },
+  {
+    "naturalText": "Give me all expenses of coffee",
+    "createdAt": "2025-12-17T00:48:27.726Z",
+    "id": "u-1765932507726"
+  },
+  {
+    "naturalText": "Give me all starbucks expenses",
+    "createdAt": "2025-12-17T00:47:00.453Z",
+    "id": "u-1765932420453"
+  },
+  {
+    "naturalText": "Give me expenses of starbucks",
+    "createdAt": "2025-12-17T00:34:14.242Z",
+    "id": "u-1765931654242"
+  },
+  {
+    "naturalText": "give both coffee and shopping expenses",
+    "createdAt": "2025-12-16T22:40:12.226Z",
+    "id": "u-1765924812226"
+  },
+  {
+    "naturalText": "give both coffee and shopping expenses",
+    "createdAt": "2025-12-16T22:39:52.114Z",
+    "id": "u-1765924792114"
+  },
+  {
+    "naturalText": "give all expenses",
+    "createdAt": "2025-12-16T22:39:35.613Z",
+    "id": "u-1765924775613"
+  },
+  {
+    "naturalText": "Give groceries bills",
+    "createdAt": "2025-12-16T22:39:22.009Z",
+    "id": "u-1765924762009"
+  },
+  {
+    "naturalText": "Give all expenses of coffee",
+    "createdAt": "2025-12-16T22:38:23.395Z",
+    "id": "u-1765924703395"
+  },
+  {
+    "naturalText": "Give me expenses of coffee and groceries",
+    "createdAt": "2025-12-16T22:37:32.788Z",
+    "id": "u-1765924652788"
+  },
+  {
+    "naturalText": "Give me expenses of coffee and groceries",
+    "createdAt": "2025-12-16T22:36:55.682Z",
+    "id": "u-1765924615682"
+  },
+  {
     "naturalText": "all coffee and uber expenses",
     "createdAt": "2025-12-16T20:19:48.830Z",
     "id": "u-1765916388830"

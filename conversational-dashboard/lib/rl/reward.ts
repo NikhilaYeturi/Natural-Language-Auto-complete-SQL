@@ -27,26 +27,50 @@ export function calculateReward(
     expectedRowCount?: number;
     hasErrors?: boolean;
   }
-): Reward {
+): Reward & { details: string[] } {
   let constraintScore = 0;
   let qualityScore = 0;
+  const details: string[] = [];
 
   // 1. CONSTRAINT SATISFACTION (Most Important - 100 points)
   if (evaluationResult.passed) {
     constraintScore = 100; // Perfect score
+    details.push("✓ All constraints satisfied (+100)");
   } else {
     // Partial credit based on which constraints are partially met
     constraintScore = calculatePartialCredit(sql, objective, evaluationResult);
+    details.push(`⚠ Partial constraints (${constraintScore}/100)`);
+    if (evaluationResult.feedback) {
+      details.push(`  Issue: ${evaluationResult.feedback.message}`);
+    }
   }
 
   // 2. QUERY QUALITY METRICS (up to 30 points)
-  qualityScore += calculateSimplicityBonus(sql);
-  qualityScore += calculateSpecificityBonus(sql);
-  qualityScore += calculateCostBonus(sql);
+  const simplicityBonus = calculateSimplicityBonus(sql);
+  if (simplicityBonus !== 0) {
+    details.push(`${simplicityBonus > 0 ? '✓' : '✗'} Simplicity: ${simplicityBonus > 0 ? '+' : ''}${simplicityBonus}`);
+  }
+  qualityScore += simplicityBonus;
+
+  const specificityBonus = calculateSpecificityBonus(sql);
+  if (specificityBonus !== 0) {
+    details.push(`${specificityBonus > 0 ? '✓' : '✗'} Specificity: ${specificityBonus > 0 ? '+' : ''}${specificityBonus}`);
+  }
+  qualityScore += specificityBonus;
+
+  const costBonus = calculateCostBonus(sql);
+  if (costBonus !== 0) {
+    details.push(`${costBonus > 0 ? '✓' : '✗'} Cost optimization: ${costBonus > 0 ? '+' : ''}${costBonus}`);
+  }
+  qualityScore += costBonus;
 
   // 3. EXECUTION METRICS (autonomous learning - up to 20 points)
   if (executionMetrics) {
-    qualityScore += calculateExecutionBonus(executionMetrics);
+    const execBonus = calculateExecutionBonus(executionMetrics);
+    if (execBonus !== 0) {
+      details.push(`${execBonus > 0 ? '✓' : '✗'} Execution: ${execBonus > 0 ? '+' : ''}${execBonus}`);
+    }
+    qualityScore += execBonus;
   }
 
   return {
@@ -54,6 +78,7 @@ export function calculateReward(
     qualityScore,
     userFeedback: 0, // Not used in autonomous mode
     total: constraintScore + qualityScore,
+    details,
   };
 }
 
@@ -205,19 +230,33 @@ export function validateQuerySemantics(
   }
 
   // 3. Check if intent wants SPECIFIC entity but query doesn't filter
-  if (objective.scope?.entity?.identifier) {
-    const entityId = String(objective.scope.entity.identifier).toLowerCase();
-    if (!lower.includes(entityId) && !intent.includes("except")) {
-      issues.push(`Intent mentions "${objective.scope.entity.identifier}" but query doesn't filter by it`);
+  // Handle filters array (mixed entity types)
+  if (objective.scope?.filters && Array.isArray(objective.scope.filters)) {
+    for (const filter of objective.scope.filters) {
+      const filterValue = String(filter.value).toLowerCase();
+      const filterField = filter.field.toLowerCase();
+
+      // Check if the field and value are in the SQL
+      if (!lower.includes(filterField) || !lower.includes(filterValue)) {
+        issues.push(`Intent mentions "${filter.value}" (${filter.field}) but query doesn't filter by it`);
+      }
+    }
+  } else if (objective.scope?.entity?.identifier) {
+    // Original single entity check
+    const identifiers = Array.isArray(objective.scope.entity.identifier)
+      ? objective.scope.entity.identifier
+      : [objective.scope.entity.identifier];
+
+    for (const id of identifiers) {
+      const entityId = String(id).toLowerCase();
+      if (!lower.includes(entityId) && !intent.includes("except")) {
+        issues.push(`Intent mentions "${id}" but query doesn't filter by it`);
+      }
     }
   }
 
-  // 4. Check SELECT * vs specific fields
-  if (intent.includes("amount") || intent.includes("cost") || intent.includes("expense")) {
-    if (lower.includes("select *")) {
-      issues.push("Intent seems to want specific amount/cost but query uses SELECT *");
-    }
-  }
+  // 4. Check SELECT * vs specific fields - REMOVED THIS CHECK
+  // SELECT * is fine for "expenses" queries since we want all columns
 
   return {
     semanticsMatch: issues.length === 0,

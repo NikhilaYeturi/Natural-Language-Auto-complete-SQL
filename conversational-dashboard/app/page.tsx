@@ -171,6 +171,10 @@ export default function Home() {
             addDebugLog(`Semantic Issues: ${log.semanticIssues.join(", ")}`);
           }
           addDebugLog(`Reward: ${log.reward.total} (constraint: ${log.reward.constraintScore}, quality: ${log.reward.qualityScore})`);
+          if (log.reward.details && log.reward.details.length > 0) {
+            addDebugLog(`Reward Breakdown:`);
+            log.reward.details.forEach((detail: string) => addDebugLog(`  ${detail}`));
+          }
           addDebugLog(`SQL: ${log.sql.substring(0, 80)}...`);
           addDebugLog(`Converged: ${log.converged ? "YES ✓" : "NO ✗"}`);
         });
@@ -275,8 +279,8 @@ export default function Home() {
           </div>
         )}
 
-       <div className={`max-w-7xl mx-auto ${objectiveAst || stage === "sql" ? "flex gap-6" : "flex justify-center"}`}>
-        <div className={`bg-white rounded-3xl shadow-lg border border-gray-200 overflow-hidden transition-all flex flex-col ${objectiveAst || stage === "sql" ? "flex-1" : "w-full max-w-3xl"}`}>
+       <div className="max-w-7xl mx-auto flex gap-6">
+        <div className="bg-white rounded-3xl shadow-lg border border-gray-200 overflow-hidden transition-all flex flex-col flex-1">
           <div className="flex-1 overflow-y-auto p-6 space-y-4 min-h-[400px] max-h-[600px]">
             {conversation.map((msg, idx) => (
               <div
@@ -327,63 +331,66 @@ export default function Home() {
           </div>
         </div>
 
-        {(objectiveAst || stage === "sql") && (
-          <div className="w-[500px] flex flex-col gap-6">
-            {objectiveAst && (
-              <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-lg font-semibold text-black">Objective Function</h2>
-                  {!objectiveLocked ? (
-                    <button
-                      onClick={approveObjective}
-                      className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-sm font-medium transition-colors text-white"
-                    >
-                      Approve
-                    </button>
-                  ) : (
-                    <button
-                      onClick={() => setObjectiveLocked(false)}
-                      className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors text-white"
-                    >
-                      Edit
-                    </button>
-                  )}
-                </div>
-                <textarea
-                  className="w-full h-[300px] rounded-lg bg-gray-50 border border-gray-300 font-mono text-xs p-4 focus:outline-none focus:border-blue-500 text-gray-900"
-                  value={JSON.stringify(objectiveAst, null, 2)}
-                  onChange={(e) => {
-                    try {
-                      setObjectiveAst(JSON.parse(e.target.value));
-                    } catch {}
-                  }}
-                  disabled={objectiveLocked}
-                />
+        <div className="w-[500px] flex flex-col gap-6">
+          {/* Objective Function - Shows when available */}
+          {objectiveAst && (
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-lg font-semibold text-black">Objective Function</h2>
+                {!objectiveLocked ? (
+                  <button
+                    onClick={approveObjective}
+                    className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-sm font-medium transition-colors text-white"
+                  >
+                    Approve
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => setObjectiveLocked(false)}
+                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors text-white"
+                  >
+                    Edit
+                  </button>
+                )}
               </div>
-            )}
+              <textarea
+                className="w-full h-[300px] rounded-lg bg-gray-50 border border-gray-300 font-mono text-xs p-4 focus:outline-none focus:border-blue-500 text-gray-900"
+                value={JSON.stringify(objectiveAst, null, 2)}
+                onChange={(e) => {
+                  try {
+                    setObjectiveAst(JSON.parse(e.target.value));
+                  } catch {}
+                }}
+                disabled={objectiveLocked}
+              />
+            </div>
+          )}
 
-            {stage === "sql" && (
-              <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
-                <h2 className="text-lg font-semibold mb-4 text-black">Generated SQL</h2>
-                <textarea
-                  className="w-full h-[200px] rounded-lg bg-gray-50 border border-gray-300 font-mono text-sm p-4 mb-4 focus:outline-none focus:border-blue-500 text-gray-900"
-                  value={sql}
-                  onChange={(e) => setSql(e.target.value)}
-                />
+          {/* SQL Editor - Always visible */}
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-semibold text-black">SQL Query</h2>
+              {sql && (
                 <button
                   onClick={() => {
                     if (sql) {
                       router.push(`/results?sql=${encodeURIComponent(sql)}`);
                     }
                   }}
-                  className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors text-white"
+                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors text-white"
                 >
                   Run Query →
                 </button>
-              </div>
-            )}
+              )}
+            </div>
+            <textarea
+              className="w-full h-[300px] rounded-lg bg-gray-50 border border-gray-300 font-mono text-sm p-4 focus:outline-none focus:border-blue-500 text-gray-900"
+              value={sql}
+              onChange={(e) => setSql(e.target.value)}
+              placeholder="SQL will appear here after approval..."
+            />
           </div>
-        )}
+        </div>
       </div>
       </div>
     </div>

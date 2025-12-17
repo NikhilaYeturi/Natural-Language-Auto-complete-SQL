@@ -42,8 +42,12 @@ REQUIRED JSON SCHEMA
     },
     "entity": {
       "type": string,
-      "identifier"?: string
-    }
+      "identifier"?: string | string[]
+    },
+    "filters"?: Array<{
+      "field": "merchant_name" | "category",
+      "value": string | string[]
+    }>
   },
 
   "constraints": {
@@ -58,6 +62,10 @@ RULES
 - intent MUST match the user's actual request - don't add complexity
 - If no timeframe mentioned, use "RELATIVE" with value "all time"
 - If specific merchant/category mentioned, extract it to entity.identifier
+- For MIXED entity types (e.g., "coffee and uber" = category + merchant), use the filters array instead
+- Each filter should specify the field (merchant_name or category) and value(s)
+- Know that: Uber, Starbucks, Amazon, McDonalds, Netflix, Target = merchants (use merchant_name)
+- Know that: Coffee, Food, Transport, Entertainment, Shopping, Groceries = categories (use category)
 - dataSource should always be "transactions"
 - mustInclude should be empty array unless specific columns requested
 - Don't invent fiscal quarters or complex timeframes user didn't ask for
@@ -77,7 +85,7 @@ User: "expenses of Starbucks"
   "constraints": {
     "dataSource": "transactions",
     "mustInclude": []
-  },
+  }
 }
 
 User: "total spending on coffee"
@@ -90,7 +98,24 @@ User: "total spending on coffee"
   "constraints": {
     "dataSource": "transactions",
     "mustInclude": ["amount"]
+  }
+}
+
+User: "coffee and uber expenses"
+{
+  "intent": "Get all coffee and Uber transaction expenses",
+  "scope": {
+    "timeframe": { "type": "RELATIVE", "value": "all time" },
+    "entity": { "type": "mixed", "identifier": null },
+    "filters": [
+      { "field": "category", "value": "Coffee" },
+      { "field": "merchant_name", "value": "Uber" }
+    ]
   },
+  "constraints": {
+    "dataSource": "transactions",
+    "mustInclude": []
+  }
 }
 `;
 

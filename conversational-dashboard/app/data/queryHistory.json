@@ -2728,5 +2728,65 @@
     "sqlQuery": "SELECT * FROM transactions where Category = 'Coffee' or merchant_name = 'Uber';",
     "rowCount": 1,
     "createdAt": "2025-12-16T20:22:00.971Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'Coffee' OR category = 'Groceries'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'Coffee' OR category = 'Groceries'",
+    "rowCount": 4,
+    "createdAt": "2025-12-16T22:37:22.609Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'Coffee' AND category = 'Groceries'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'Coffee' AND category = 'Groceries'",
+    "rowCount": 4,
+    "createdAt": "2025-12-16T22:37:55.066Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category IN ('Coffee', 'groceries')",
+    "sqlQuery": "SELECT * FROM transactions WHERE category IN ('Coffee', 'groceries')",
+    "rowCount": 4,
+    "createdAt": "2025-12-16T22:39:13.096Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'Groceries'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'Groceries'",
+    "rowCount": 0,
+    "createdAt": "2025-12-16T22:39:29.740Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount > 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount > 0;",
+    "rowCount": 10,
+    "createdAt": "2025-12-16T22:39:41.498Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE category = 'Coffee' OR category = 'Shopping'",
+    "sqlQuery": "SELECT * FROM transactions WHERE category = 'Coffee' OR category = 'Shopping'",
+    "rowCount": 4,
+    "createdAt": "2025-12-16T22:40:02.192Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-17T00:34:33.759Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "sqlQuery": "SELECT * FROM transactions WHERE merchant_name = 'Starbucks'",
+    "rowCount": 3,
+    "createdAt": "2025-12-17T00:47:25.889Z"
+  },
+  {
+    "naturalText": "SELECT * FROM transactions WHERE amount > 0;",
+    "sqlQuery": "SELECT * FROM transactions WHERE amount > 0;",
+    "rowCount": 10,
+    "createdAt": "2025-12-17T01:47:57.298Z"
+  },
+  {
+    "naturalText": "SELECT SUM(amount) FROM transactions WHERE amount > 0;",
+    "sqlQuery": "SELECT SUM(amount) FROM transactions WHERE amount > 0;",
+    "rowCount": 1,
+    "createdAt": "2025-12-17T01:48:32.921Z"
   }
 ]

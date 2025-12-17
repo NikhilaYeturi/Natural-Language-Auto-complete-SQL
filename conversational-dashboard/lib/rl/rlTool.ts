@@ -119,6 +119,7 @@ RULES:
 - Preserve intent semantics
 - Use correct entity-column mapping
 - Multiple identifiers → use IN
+- If objective has "filters" array, combine them with OR: WHERE (field1 = value1 OR field2 = value2)
 - Return ONLY SQL
 `;
 
@@ -169,6 +170,57 @@ export function evaluateSQL(
   explain: any,
   objective: any
 ): { passed: boolean; feedback?: Feedback } {
+  const lower = sql.toLowerCase();
+
+  // Handle mixed entity types with filters
+  const filters = objective?.scope?.filters;
+  if (filters && Array.isArray(filters) && filters.length > 0) {
+    // Check if SQL has WHERE clause
+    if (!lower.includes("where")) {
+      return {
+        passed: false,
+        feedback: {
+          code: "MISSING_WHERE",
+          message: "Query needs WHERE clause for filtering",
+          fix: "Add WHERE clause with filters",
+        },
+      };
+    }
+
+    // Check if all filter fields are present
+    for (const filter of filters) {
+      if (!lower.includes(filter.field.toLowerCase())) {
+        return {
+          passed: false,
+          feedback: {
+            code: "MISSING_FILTER_FIELD",
+            message: `Query must filter by ${filter.field}`,
+            fix: `Add ${filter.field} to WHERE clause`,
+          },
+        };
+      }
+    }
+
+    // Aggregation mismatch
+    if (
+      objective.intent.toLowerCase().includes("all") &&
+      !objective.intent.toLowerCase().includes("total") &&
+      explain.aggregation
+    ) {
+      return {
+        passed: false,
+        feedback: {
+          code: "UNWANTED_AGGREGATION",
+          message: "Aggregation not allowed for 'all records'",
+          fix: "Remove aggregation",
+        },
+      };
+    }
+
+    return { passed: true };
+  }
+
+  // Original single entity logic
   const entity = objective?.scope?.entity;
   const identifiers = entity?.identifier;
   const expectedColumn = ENTITY_COLUMN_MAP[entity?.type];
@@ -229,6 +281,24 @@ export function evaluateSQL(
  //  FALLBACK (SAFE, SYMBOLIC)
 
 function heuristicFallback(objective: any): string {
+  // Check if we have filters array (mixed entity types)
+  const filters = objective?.scope?.filters;
+  if (filters && Array.isArray(filters) && filters.length > 0) {
+    const conditions = filters.map((filter: any) => {
+      const field = filter.field;
+      const value = filter.value;
+
+      if (Array.isArray(value)) {
+        const values = value.map(v => `'${v}'`).join(", ");
+        return `${field} IN (${values})`;
+      }
+      return `${field} = '${value}'`;
+    });
+
+    return `SELECT * FROM transactions WHERE ${conditions.join(" OR ")}`;
+  }
+
+  // Original single entity logic
   const entity = objective?.scope?.entity;
   const column = ENTITY_COLUMN_MAP[entity?.type];
   const id = entity?.identifier;

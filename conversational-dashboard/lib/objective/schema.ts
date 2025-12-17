@@ -8,8 +8,13 @@ export type ObjectiveConfig = {
     };
     entity: {
       type: string;
-      identifier?: string;
+      identifier?: string | string[];
     };
+    // NEW: Support for mixed entity types (e.g., category + merchant)
+    filters?: Array<{
+      field: "merchant_name" | "category";
+      value: string | string[];
+    }>;
   };
 
   constraints: {

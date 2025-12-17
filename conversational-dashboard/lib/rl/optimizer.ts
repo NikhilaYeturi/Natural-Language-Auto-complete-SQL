@@ -35,7 +35,7 @@ export type IterationLog = {
   evaluation: { passed: boolean; feedback?: Feedback };
   semanticMatch: boolean;
   semanticIssues: string[];
-  reward: { total: number; constraintScore: number; qualityScore: number };
+  reward: { total: number; constraintScore: number; qualityScore: number; details: string[] };
   converged: boolean;
 };
 
@@ -53,7 +53,7 @@ export async function optimizeSQL(
 ): Promise<{ sql: string; iterations: number; finalReward: number; iterationLogs: IterationLog[] }> {
   // console.log("\n========== Q-LEARNING OPTIMIZER ==========");
 
-  const maxIterations = objective?.loopPolicy?.maxIterations ?? 5;
+  const maxIterations = objective?.loopPolicy?.maxIterations ?? 10;
   let currentSQL = "";
   let previousFeedback: Feedback | null = null;
   let finalReward = 0;
@@ -191,6 +191,7 @@ export async function optimizeSQL(
         total: reward.total,
         constraintScore: reward.constraintScore,
         qualityScore: reward.qualityScore,
+        details: reward.details || [],
       },
       converged: evaluationResult.passed && semanticValidation.semanticsMatch && reward.total >= 100,
     });

@@ -1788,5 +1788,375 @@
     "timestamp": "2025-12-16T20:19:55.239Z",
     "objectiveHash": "94cfc070",
     "id": "e9a1f4d824583de3"
+  },
+  {
+    "stateKey": "*||||||0||0||cd4e8a8e",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "*||||||0||0||cd4e8a8e",
+    "terminal": true,
+    "timestamp": "2025-12-16T22:37:09.270Z",
+    "objectiveHash": "cd4e8a8e",
+    "id": "ea6a8b39a7511d7d"
+  },
+  {
+    "stateKey": "*||||||0||0||cd4e8a8e",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "*||||||0||0||cd4e8a8e",
+    "terminal": true,
+    "timestamp": "2025-12-16T22:37:39.329Z",
+    "objectiveHash": "cd4e8a8e",
+    "id": "f33b0e1138b982c6"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "*||||||0||0||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-16T22:38:28.692Z",
+    "objectiveHash": "2494e2b2",
+    "id": "b35d6046a985de95"
+  },
+  {
+    "stateKey": "*||||||0||0||a2928b43",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "*||||||0||0||a2928b43",
+    "terminal": true,
+    "timestamp": "2025-12-16T22:39:08.218Z",
+    "objectiveHash": "a2928b43",
+    "id": "681171404d58d23a"
+  },
+  {
+    "stateKey": "*||||||0||0||0a6e7423",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "*||||||0||0||0a6e7423",
+    "terminal": true,
+    "timestamp": "2025-12-16T22:39:27.155Z",
+    "objectiveHash": "0a6e7423",
+    "id": "d722179b7c99ee17"
+  },
+  {
+    "stateKey": "*||||||0||0||28eebf58",
+    "action": "llm_policy",
+    "reward": -5,
+    "nextStateKey": "*||||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-16T22:39:39.362Z",
+    "objectiveHash": "28eebf58",
+    "id": "fcafeb0da3c8f9cf"
+  },
+  {
+    "stateKey": "*||||||0||0||28eebf58",
+    "action": "add_where",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-16T22:39:39.376Z",
+    "objectiveHash": "28eebf58",
+    "id": "013600c885b6197d"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||28eebf58",
+    "action": "llm_policy",
+    "reward": -5,
+    "nextStateKey": "*||||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-16T22:39:39.468Z",
+    "objectiveHash": "28eebf58",
+    "id": "7f6b0a24207a6c49"
+  },
+  {
+    "stateKey": "*||||||0||0||28eebf58",
+    "action": "add_where",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-16T22:39:39.476Z",
+    "objectiveHash": "28eebf58",
+    "id": "f476882a10996b51"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||28eebf58",
+    "action": "fix_entity",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-16T22:39:39.485Z",
+    "objectiveHash": "28eebf58",
+    "id": "d556bf8a7b8b1273"
+  },
+  {
+    "stateKey": "*||||||0||0||b2b3b224",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "*||||||0||0||b2b3b224",
+    "terminal": true,
+    "timestamp": "2025-12-16T22:40:00.009Z",
+    "objectiveHash": "b2b3b224",
+    "id": "bd07140c08db40e4"
+  },
+  {
+    "stateKey": "*||||||0||0||b2b3b224",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "*||||||0||0||b2b3b224",
+    "terminal": true,
+    "timestamp": "2025-12-16T22:40:25.974Z",
+    "objectiveHash": "b2b3b224",
+    "id": "3dfb2d43af64d2f6"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-17T00:34:21.656Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "92d452adda0878b3"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-17T00:47:06.194Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "2bc4da94716b1674"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "*||||||0||0||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-17T00:48:32.857Z",
+    "objectiveHash": "2494e2b2",
+    "id": "42c6575a9a5f39ce"
+  },
+  {
+    "stateKey": "*||||||0||0||2494e2b2",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "*||||||0||0||2494e2b2",
+    "terminal": true,
+    "timestamp": "2025-12-17T01:36:58.447Z",
+    "objectiveHash": "2494e2b2",
+    "id": "9b2c9a9c9e46dde3"
+  },
+  {
+    "stateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "*||merchant_name = 'Starbucks'||||0||0||59a1f1dd",
+    "terminal": true,
+    "timestamp": "2025-12-17T01:44:42.021Z",
+    "objectiveHash": "59a1f1dd",
+    "id": "dd5c1aef37460b3b"
+  },
+  {
+    "stateKey": "*||||||0||0||28eebf58",
+    "action": "add_where",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:47:53.819Z",
+    "objectiveHash": "28eebf58",
+    "id": "ca55b15478e3cd59"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||28eebf58",
+    "action": "fix_entity",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:47:53.838Z",
+    "objectiveHash": "28eebf58",
+    "id": "f5b3e63ef919e9c8"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||28eebf58",
+    "action": "fix_entity",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:47:53.847Z",
+    "objectiveHash": "28eebf58",
+    "id": "d3b8fc333a3094a2"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||28eebf58",
+    "action": "fix_entity",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:47:53.849Z",
+    "objectiveHash": "28eebf58",
+    "id": "daecaeb26dc2d9fc"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||28eebf58",
+    "action": "fix_entity",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:47:53.852Z",
+    "objectiveHash": "28eebf58",
+    "id": "f2fd96345f989895"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||28eebf58",
+    "action": "fix_entity",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:47:53.854Z",
+    "objectiveHash": "28eebf58",
+    "id": "f432cc252539ea12"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||28eebf58",
+    "action": "fix_entity",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:47:53.859Z",
+    "objectiveHash": "28eebf58",
+    "id": "13968ca0f801f71c"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||28eebf58",
+    "action": "fix_entity",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:47:53.872Z",
+    "objectiveHash": "28eebf58",
+    "id": "c098db61b0171b7c"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||28eebf58",
+    "action": "fix_entity",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:47:53.881Z",
+    "objectiveHash": "28eebf58",
+    "id": "fc4b3858ac6584f8"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||28eebf58",
+    "action": "fix_entity",
+    "reward": 5,
+    "nextStateKey": "*||amount > 0;||||0||0||28eebf58",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:47:53.896Z",
+    "objectiveHash": "28eebf58",
+    "id": "c33ddfdbb5c3bb55"
+  },
+  {
+    "stateKey": "*||||||0||0||04c34904",
+    "action": "llm_policy",
+    "reward": -5,
+    "nextStateKey": "*||||||0||0||04c34904",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:48:16.186Z",
+    "objectiveHash": "04c34904",
+    "id": "910af1caa23764c8"
+  },
+  {
+    "stateKey": "*||||||0||0||04c34904",
+    "action": "add_where",
+    "reward": 45,
+    "nextStateKey": "*||amount > 0;||||0||0||04c34904",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:48:16.195Z",
+    "objectiveHash": "04c34904",
+    "id": "387b680ce53fd174"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||04c34904",
+    "action": "add_agg",
+    "reward": 45,
+    "nextStateKey": "SUM(amount)||amount > 0;||SUM(AMOUNT)||0||0||04c34904",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:48:16.218Z",
+    "objectiveHash": "04c34904",
+    "id": "62159e01c689560b"
+  },
+  {
+    "stateKey": "SUM(amount)||amount > 0;||SUM(AMOUNT)||0||0||04c34904",
+    "action": "llm_policy",
+    "reward": -5,
+    "nextStateKey": "*||||||0||0||04c34904",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:48:16.338Z",
+    "objectiveHash": "04c34904",
+    "id": "88c44f42cf4da452"
+  },
+  {
+    "stateKey": "*||||||0||0||04c34904",
+    "action": "add_where",
+    "reward": 45,
+    "nextStateKey": "*||amount > 0;||||0||0||04c34904",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:48:16.354Z",
+    "objectiveHash": "04c34904",
+    "id": "2daf853a24abbf79"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||04c34904",
+    "action": "add_agg",
+    "reward": 45,
+    "nextStateKey": "SUM(amount)||amount > 0;||SUM(AMOUNT)||0||0||04c34904",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:48:16.368Z",
+    "objectiveHash": "04c34904",
+    "id": "e7a50ba085713212"
+  },
+  {
+    "stateKey": "SUM(amount)||amount > 0;||SUM(AMOUNT)||0||0||04c34904",
+    "action": "add_column",
+    "reward": 45,
+    "nextStateKey": "SUM(amount),amount||amount > 0;||SUM(AMOUNT)||0||0||04c34904",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:48:16.389Z",
+    "objectiveHash": "04c34904",
+    "id": "211917445b5c7041"
+  },
+  {
+    "stateKey": "SUM(amount),amount||amount > 0;||SUM(AMOUNT)||0||0||04c34904",
+    "action": "llm_policy",
+    "reward": -5,
+    "nextStateKey": "*||||||0||0||04c34904",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:48:16.501Z",
+    "objectiveHash": "04c34904",
+    "id": "796845032d8cf56f"
+  },
+  {
+    "stateKey": "*||||||0||0||04c34904",
+    "action": "add_where",
+    "reward": 45,
+    "nextStateKey": "*||amount > 0;||||0||0||04c34904",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:48:16.510Z",
+    "objectiveHash": "04c34904",
+    "id": "bb7d78c1262ab117"
+  },
+  {
+    "stateKey": "*||amount > 0;||||0||0||04c34904",
+    "action": "add_agg",
+    "reward": 45,
+    "nextStateKey": "SUM(amount)||amount > 0;||SUM(AMOUNT)||0||0||04c34904",
+    "terminal": false,
+    "timestamp": "2025-12-17T01:48:16.526Z",
+    "objectiveHash": "04c34904",
+    "id": "4e1161d9bc8867e4"
   }
 ]
