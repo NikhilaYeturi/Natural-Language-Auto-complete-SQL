@@ -129,23 +129,64 @@ export default function Home() {
     }
   };
 
-     //APPROVE → AUTO RUN rlTool
-  const approveObjective = async () => {
+  // Generate SQL (fast, no RL)
+  const generateSQL = async () => {
     if (!objectiveAst) return;
 
-    addDebugLog("Objective approved, starting RL optimization...");
+    addDebugLog("Generating SQL...");
     setObjectiveLocked(true);
     setStage("optimizing");
 
     setConversation((prev) => [
       ...prev,
-      { role: "assistant", text: "Optimizing query using rlTool…" },
+      { role: "assistant", text: "Generating SQL query…" },
     ]);
 
     try {
       const startTime = Date.now();
-      addDebugLog("Calling /api/rl/execute...");
+      const res = await fetch("/api/sql/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ objective: objectiveAst }),
+      });
 
+      const data = await res.json();
+      const duration = Date.now() - startTime;
+
+      addDebugLog(`✓ SQL generated (${duration}ms)`);
+      addDebugLog(`Generated SQL: ${data.sql}`);
+
+      setSql(data.sql);
+      setStage("sql");
+
+      setConversation((prev) => [
+        ...prev,
+        { role: "assistant", text: "SQL generated. You can run it or optimize it further." },
+      ]);
+    } catch (err) {
+      addDebugLog("✗ SQL generation failed");
+      setConversation((prev) => [
+        ...prev,
+        { role: "assistant", text: "Failed to generate SQL." },
+      ]);
+      setStage("objective");
+    }
+  };
+
+  // Optimize SQL using RL
+  const optimizeSQL = async () => {
+    if (!objectiveAst) return;
+
+    addDebugLog("Starting RL optimization...");
+    setStage("optimizing");
+
+    setConversation((prev) => [
+      ...prev,
+      { role: "assistant", text: "Optimizing query using RL…" },
+    ]);
+
+    try {
+      const startTime = Date.now();
       const res = await fetch("/api/rl/execute", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -156,7 +197,7 @@ export default function Home() {
       const duration = Date.now() - startTime;
 
       addDebugLog(`✓ RL optimization complete (${duration}ms)`);
-      addDebugLog(`Generated SQL: ${data.sql}`);
+      addDebugLog(`Optimized SQL: ${data.sql}`);
 
       // Log iteration details
       if (data.iterationLogs && data.iterationLogs.length > 0) {
@@ -185,7 +226,7 @@ export default function Home() {
 
       setConversation((prev) => [
         ...prev,
-        { role: "assistant", text: "Optimization complete. SQL is ready." },
+        { role: "assistant", text: "RL optimization complete. SQL is ready." },
       ]);
     } catch (err) {
       addDebugLog("✗ RL optimization failed");
@@ -309,8 +350,8 @@ export default function Home() {
         )}
 
        <div className="max-w-7xl mx-auto flex gap-6">
-        <div className="bg-white rounded-3xl shadow-lg border border-gray-200 overflow-hidden transition-all flex flex-col flex-1">
-          <div className="flex-1 overflow-y-auto p-6 space-y-4 min-h-[400px] max-h-[600px]">
+        <div className="bg-white rounded-3xl shadow-lg border border-gray-200 overflow-hidden transition-all flex flex-col w-[600px]">
+          <div className="flex-1 overflow-y-auto p-6 space-y-4 min-h-[300px] max-h-[500px]">
             {conversation.map((msg, idx) => (
               <div
                 key={idx}
@@ -360,30 +401,38 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[500px] flex flex-col gap-6">
+        <div className="flex-1 flex flex-col gap-6 overflow-y-auto max-h-[calc(100vh-100px)]">
           {/* Objective Function - Shows when available */}
           {objectiveAst && (
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-semibold text-black">Objective Function</h2>
                 {!objectiveLocked ? (
-                  <button
-                    onClick={approveObjective}
-                    className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-sm font-medium transition-colors text-white"
-                  >
-                    Approve
-                  </button>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={generateSQL}
+                      className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors text-white"
+                    >
+                      Generate SQL
+                    </button>
+                    <button
+                      onClick={optimizeSQL}
+                      className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-sm font-medium transition-colors text-white"
+                    >
+                      Optimize with RL
+                    </button>
+                  </div>
                 ) : (
                   <button
                     onClick={() => setObjectiveLocked(false)}
-                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors text-white"
+                    className="px-4 py-2 bg-gray-600 hover:bg-gray-700 rounded-lg text-sm font-medium transition-colors text-white"
                   >
                     Edit
                   </button>
                 )}
               </div>
               <textarea
-                className="w-full h-[300px] rounded-lg bg-gray-50 border border-gray-300 font-mono text-xs p-4 focus:outline-none focus:border-blue-500 text-gray-900"
+                className="w-full h-[200px] rounded-lg bg-gray-50 border border-gray-300 font-mono text-xs p-4 focus:outline-none focus:border-blue-500 text-gray-900"
                 value={JSON.stringify(objectiveAst, null, 2)}
                 onChange={(e) => {
                   try {
@@ -410,10 +459,10 @@ export default function Home() {
               )}
             </div>
             <textarea
-              className="w-full h-[300px] rounded-lg bg-gray-50 border border-gray-300 font-mono text-sm p-4 focus:outline-none focus:border-blue-500 text-gray-900"
+              className="w-full h-[200px] rounded-lg bg-gray-50 border border-gray-300 font-mono text-sm p-4 focus:outline-none focus:border-blue-500 text-gray-900"
               value={sql}
               onChange={(e) => setSql(e.target.value)}
-              placeholder="SQL will appear here after approval..."
+              placeholder="SQL query"
             />
           </div>
 

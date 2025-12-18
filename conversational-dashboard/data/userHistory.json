@@ -1,5 +1,30 @@
 [
   {
+    "naturalText": "Join all the tables",
+    "createdAt": "2025-12-18T17:11:23.601Z",
+    "id": "u-1766077883601"
+  },
+  {
+    "naturalText": "Join the employee, employee names, compensation tables",
+    "createdAt": "2025-12-18T17:11:09.643Z",
+    "id": "u-1766077869643"
+  },
+  {
+    "naturalText": "Join the tables employee, employee names, compensation tables",
+    "createdAt": "2025-12-18T17:10:37.269Z",
+    "id": "u-1766077837269"
+  },
+  {
+    "naturalText": "Join the tables employee, employee names, compensation",
+    "createdAt": "2025-12-18T17:08:31.549Z",
+    "id": "u-1766077711549"
+  },
+  {
+    "naturalText": "Join all the employee and compensation tables",
+    "createdAt": "2025-12-18T17:02:48.957Z",
+    "id": "u-1766077368957"
+  },
+  {
     "naturalText": "join employee, employee teams and compensatio",
     "createdAt": "2025-12-18T16:49:21.288Z",
     "id": "u-1766076561288"
