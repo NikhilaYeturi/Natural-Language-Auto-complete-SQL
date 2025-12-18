@@ -2158,5 +2158,215 @@
     "timestamp": "2025-12-17T01:48:16.526Z",
     "objectiveHash": "04c34904",
     "id": "4e1161d9bc8867e4"
+  },
+  {
+    "stateKey": "c.salary,e.name||d.name = 'Engineering'||||0||0||8572f438",
+    "action": "llm_policy",
+    "reward": 115,
+    "nextStateKey": "c.salary,e.name||d.name = 'Engineering'||||0||0||8572f438",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:23:47.199Z",
+    "objectiveHash": "8572f438",
+    "id": "762ad46521ee5f41"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:14.698Z",
+    "objectiveHash": "e0510314",
+    "id": "531f415385ebda29"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:14.921Z",
+    "objectiveHash": "e0510314",
+    "id": "406af02cd5ddc941"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:15.010Z",
+    "objectiveHash": "e0510314",
+    "id": "746f1a68295f7dca"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:15.107Z",
+    "objectiveHash": "e0510314",
+    "id": "b94c32cdd08c6aea"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:15.198Z",
+    "objectiveHash": "e0510314",
+    "id": "8beeb619081d49cc"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:15.282Z",
+    "objectiveHash": "e0510314",
+    "id": "8bca2cbd6cc84fd7"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:15.366Z",
+    "objectiveHash": "e0510314",
+    "id": "7c802ab982eafbc3"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:15.450Z",
+    "objectiveHash": "e0510314",
+    "id": "b88ef1a89dcc591f"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:15.535Z",
+    "objectiveHash": "e0510314",
+    "id": "adc4cdd6c0637f28"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:15.628Z",
+    "objectiveHash": "e0510314",
+    "id": "1c8c868503794c08"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:30.348Z",
+    "objectiveHash": "e0510314",
+    "id": "c82542a847e09ad1"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:30.441Z",
+    "objectiveHash": "e0510314",
+    "id": "1e4ef5b13aa7e372"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:31.085Z",
+    "objectiveHash": "e0510314",
+    "id": "804c145c0e4cee6f"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:31.170Z",
+    "objectiveHash": "e0510314",
+    "id": "c3f91208b6d9aaf8"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:31.383Z",
+    "objectiveHash": "e0510314",
+    "id": "dae58d9bebefd7ad"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:31.461Z",
+    "objectiveHash": "e0510314",
+    "id": "70723adc1baecca8"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:31.561Z",
+    "objectiveHash": "e0510314",
+    "id": "370da51f9a3502ef"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:31.799Z",
+    "objectiveHash": "e0510314",
+    "id": "534ef2d190a19a11"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:31.891Z",
+    "objectiveHash": "e0510314",
+    "id": "6c70ac0d9e27f166"
+  },
+  {
+    "stateKey": "c.salary,e.name||||||0||0||e0510314",
+    "action": "llm_policy",
+    "reward": 90,
+    "nextStateKey": "c.salary,e.name||||||0||0||e0510314",
+    "terminal": true,
+    "timestamp": "2025-12-18T04:48:31.969Z",
+    "objectiveHash": "e0510314",
+    "id": "451cd7dd994e2e37"
   }
 ]

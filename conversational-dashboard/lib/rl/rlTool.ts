@@ -3,7 +3,7 @@ import { optimizeSQL } from "./optimizer";
 
 /**
   rlTool — Q-Learning based SQL Optimizer with feedback-control loop
- 
+
   NOW USES:
   - Q-Learning for action selection
   - Experience replay for learning
@@ -23,9 +23,9 @@ export type Feedback = {
 };
 
 const ENTITY_COLUMN_MAP: Record<string, string> = {
-  merchant: "merchant_name",
-  merchants: "merchant_name",
-  category: "category",
+  department: "d.name",
+  employee: "e.name",
+  user: "e.name",
 };
 
 export async function rlTool(
@@ -79,14 +79,24 @@ async function getSchema(): Promise<Schema> {
   return {
     tables: [
       {
-        name: "transactions",
-        columns: [
-          "id",
-          "merchant_name",
-          "amount",
-          "category",
-          "created_at",
-        ],
+        name: "employees",
+        columns: ["employee_id", "name", "city", "department_id"],
+      },
+      {
+        name: "departments",
+        columns: ["department_id", "name", "location"],
+      },
+      {
+        name: "compensation",
+        columns: ["employee_id", "salary", "reports_to"],
+      },
+      {
+        name: "teams",
+        columns: ["team_id", "team_name", "department_id"],
+      },
+      {
+        name: "employee_teams",
+        columns: ["employee_id", "team_id"],
       },
     ],
   };
@@ -103,7 +113,7 @@ export async function generateSQL(input: {
   const { objective, schema, previousSql, feedback } = input;
 
   const prompt = `
-You are an autonomous SQL agent.
+You are an autonomous SQL agent for an employee/department database.
 
 OBJECTIVE:
 ${JSON.stringify(objective, null, 2)}
@@ -111,16 +121,20 @@ ${JSON.stringify(objective, null, 2)}
 SCHEMA:
 ${JSON.stringify(schema, null, 2)}
 
+RELATIONSHIPS:
+- employees.department_id -> departments.department_id
+- compensation.employee_id -> employees.employee_id
+
 ${previousSql ? `PREVIOUS SQL:\n${previousSql}` : ""}
 ${feedback ? `CRITIC FEEDBACK:\n${JSON.stringify(feedback, null, 2)}` : ""}
 
 RULES:
-- Fix ONLY what critic mentions
-- Preserve intent semantics
-- Use correct entity-column mapping
-- Multiple identifiers → use IN
-- If objective has "filters" array, combine them with OR: WHERE (field1 = value1 OR field2 = value2)
-- Return ONLY SQL
+- To get employee names and department names, JOIN employees (e) with departments (d) on e.department_id = d.department_id
+- To get salaries, also JOIN with compensation (c) on e.employee_id = c.employee_id
+- Use aliases: e for employees, d for departments, c for compensation
+- For department filter, use WHERE d.name = 'Department Name'
+- Select e.name for employee name, d.name AS department for department name, c.salary for salary
+- Return ONLY SQL, no explanations
 `;
 
   if (!process.env.OPENAI_API_KEY) {
@@ -137,7 +151,7 @@ RULES:
       model: RL_MODEL,
       temperature: 0.1,
       messages: [
-        { role: "system", content: "Return ONLY SQL." },
+        { role: "system", content: "Return ONLY SQL for the employee database." },
         { role: "user", content: prompt },
       ],
     }),
@@ -154,13 +168,19 @@ export function explainQuery(sql: string) {
   const lower = sql.toLowerCase();
 
   return {
-    usesIn: lower.includes(" in "),
-    usesEquality: lower.includes("="),
+    usesJoin: lower.includes("join"),
+    hasDepartmentJoin: lower.includes("join departments"),
+    hasCompensationJoin: lower.includes("join compensation"),
+    usesWhere: lower.includes("where"),
     filters: {
-      merchant: lower.includes("merchant_name"),
-      category: lower.includes("category"),
+      department: lower.includes("d.name") && lower.includes("where"),
+      employee: lower.includes("e.name"),
     },
-    aggregation: lower.includes("sum(") || lower.includes("count("),
+    selects: {
+      employeeName: lower.includes("e.name"),
+      departmentName: lower.includes("d.name"),
+      salary: lower.includes("salary") || lower.includes("c.salary"),
+    },
   };
 }
  // CRITIC (THE MOST IMPORTANT PART) - Now exported for optimizer
@@ -171,108 +191,64 @@ export function evaluateSQL(
   objective: any
 ): { passed: boolean; feedback?: Feedback } {
   const lower = sql.toLowerCase();
-
-  // Handle mixed entity types with filters
-  const filters = objective?.scope?.filters;
-  if (filters && Array.isArray(filters) && filters.length > 0) {
-    // Check if SQL has WHERE clause
-    if (!lower.includes("where")) {
-      return {
-        passed: false,
-        feedback: {
-          code: "MISSING_WHERE",
-          message: "Query needs WHERE clause for filtering",
-          fix: "Add WHERE clause with filters",
-        },
-      };
-    }
-
-    // Check if all filter fields are present
-    for (const filter of filters) {
-      if (!lower.includes(filter.field.toLowerCase())) {
-        return {
-          passed: false,
-          feedback: {
-            code: "MISSING_FILTER_FIELD",
-            message: `Query must filter by ${filter.field}`,
-            fix: `Add ${filter.field} to WHERE clause`,
-          },
-        };
-      }
-    }
-
-    // Aggregation mismatch
-    if (
-      objective.intent.toLowerCase().includes("all") &&
-      !objective.intent.toLowerCase().includes("total") &&
-      explain.aggregation
-    ) {
-      return {
-        passed: false,
-        feedback: {
-          code: "UNWANTED_AGGREGATION",
-          message: "Aggregation not allowed for 'all records'",
-          fix: "Remove aggregation",
-        },
-      };
-    }
-
-    return { passed: true };
-  }
-
-  // Original single entity logic
+  const dataSource = objective?.constraints?.dataSource;
+  const mustInclude = objective?.constraints?.mustInclude || [];
   const entity = objective?.scope?.entity;
-  const identifiers = entity?.identifier;
-  const expectedColumn = ENTITY_COLUMN_MAP[entity?.type];
+  const identifier = entity?.identifier;
 
-  if (!expectedColumn) {
-    return {
-      passed: false,
-      feedback: {
-        code: "UNKNOWN_ENTITY",
-        message: "Unknown entity type",
-        fix: "Use correct entity mapping",
-      },
-    };
+  // Check if query needs JOINs based on dataSource
+  if (dataSource === "employees_with_compensation" || mustInclude.includes("salary")) {
+    if (!explain.hasCompensationJoin) {
+      return {
+        passed: false,
+        feedback: {
+          code: "MISSING_COMPENSATION_JOIN",
+          message: "Query must JOIN with compensation table for salary",
+          fix: "Add: JOIN compensation c ON e.employee_id = c.employee_id",
+        },
+      };
+    }
   }
 
-  // Wrong column used
-  if (!explain.filters[entity.type]) {
-    return {
-      passed: false,
-      feedback: {
-        code: "WRONG_COLUMN",
-        message: `Expected filter on ${expectedColumn}`,
-        fix: `Filter using ${expectedColumn}`,
-      },
-    };
+  if (dataSource === "employees_with_departments" || dataSource === "employees_with_compensation") {
+    if (!explain.hasDepartmentJoin) {
+      return {
+        passed: false,
+        feedback: {
+          code: "MISSING_DEPARTMENT_JOIN",
+          message: "Query must JOIN with departments table",
+          fix: "Add: JOIN departments d ON e.department_id = d.department_id",
+        },
+      };
+    }
   }
 
-  // Multiple identifiers require IN
-  if (Array.isArray(identifiers) && !explain.usesIn) {
-    return {
-      passed: false,
-      feedback: {
-        code: "MULTI_ENTITY_NO_IN",
-        message: "Multiple identifiers require IN clause",
-        fix: "Use IN (...) instead of equality",
-      },
-    };
+  // Check for department filter
+  if (identifier && entity?.type === "department") {
+    if (!explain.usesWhere || !lower.includes(identifier.toLowerCase())) {
+      return {
+        passed: false,
+        feedback: {
+          code: "MISSING_DEPARTMENT_FILTER",
+          message: `Query must filter by department: ${identifier}`,
+          fix: `Add: WHERE d.name = '${identifier}'`,
+        },
+      };
+    }
   }
 
-  // Aggregation mismatch
-  if (
-    objective.intent.toLowerCase().includes("all") &&
-    explain.aggregation
-  ) {
-    return {
-      passed: false,
-      feedback: {
-        code: "UNWANTED_AGGREGATION",
-        message: "Aggregation not allowed for 'all records'",
-        fix: "Remove aggregation",
-      },
-    };
+  // Check for required columns
+  for (const col of mustInclude) {
+    if (col === "salary" && !explain.selects.salary) {
+      return {
+        passed: false,
+        feedback: {
+          code: "MISSING_SALARY_COLUMN",
+          message: "Query must select salary column",
+          fix: "Add c.salary to SELECT clause",
+        },
+      };
+    }
   }
 
   return { passed: true };
@@ -281,36 +257,41 @@ export function evaluateSQL(
  //  FALLBACK (SAFE, SYMBOLIC)
 
 function heuristicFallback(objective: any): string {
-  // Check if we have filters array (mixed entity types)
-  const filters = objective?.scope?.filters;
-  if (filters && Array.isArray(filters) && filters.length > 0) {
-    const conditions = filters.map((filter: any) => {
-      const field = filter.field;
-      const value = filter.value;
-
-      if (Array.isArray(value)) {
-        const values = value.map(v => `'${v}'`).join(", ");
-        return `${field} IN (${values})`;
-      }
-      return `${field} = '${value}'`;
-    });
-
-    return `SELECT * FROM transactions WHERE ${conditions.join(" OR ")}`;
-  }
-
-  // Original single entity logic
+  const dataSource = objective?.constraints?.dataSource || "employees";
+  const mustInclude = objective?.constraints?.mustInclude || [];
   const entity = objective?.scope?.entity;
-  const column = ENTITY_COLUMN_MAP[entity?.type];
-  const id = entity?.identifier;
+  const identifier = entity?.identifier;
 
-  if (!column || !id) {
-    return `SELECT * FROM transactions;`;
+  // Determine which tables to join based on dataSource
+  if (dataSource === "employees_with_compensation" || mustInclude.includes("salary")) {
+    // Need employees, departments, and compensation
+    const selectCols = mustInclude.length > 0
+      ? mustInclude.map((col: string) => col === "name" ? "e.name" : col === "salary" ? "c.salary" : `d.${col}`).join(", ")
+      : "e.name, d.name AS department, c.salary";
+
+    let sql = `SELECT ${selectCols} FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN compensation c ON e.employee_id = c.employee_id`;
+
+    if (identifier && entity?.type === "department") {
+      sql += ` WHERE d.name = '${identifier}'`;
+    }
+
+    return sql;
   }
 
-  if (Array.isArray(id)) {
-    const values = id.map(v => `'${v}'`).join(", ");
-    return `SELECT * FROM transactions WHERE ${column} IN (${values})`;
+  if (dataSource === "employees_with_departments") {
+    const selectCols = mustInclude.length > 0
+      ? mustInclude.map((col: string) => col === "name" ? "e.name" : `d.${col}`).join(", ")
+      : "e.name, d.name AS department";
+
+    let sql = `SELECT ${selectCols} FROM employees e JOIN departments d ON e.department_id = d.department_id`;
+
+    if (identifier && entity?.type === "department") {
+      sql += ` WHERE d.name = '${identifier}'`;
+    }
+
+    return sql;
   }
 
-  return `SELECT * FROM transactions WHERE ${column} = '${id}'`;
+  // Default: just employees
+  return `SELECT * FROM employees`;
 }

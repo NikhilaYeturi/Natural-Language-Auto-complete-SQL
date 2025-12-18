@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "updatedAt": "2025-12-17T01:48:16.529Z",
+  "updatedAt": "2025-12-18T04:48:31.971Z",
   "hyperparams": {
     "alpha": 0.1,
     "gamma": 0.9,
-    "epsilon": 0.1525725328281993,
+    "epsilon": 0.15029536870417182,
     "epsilonDecay": 0.995,
     "epsilonMin": 0.05,
     "maxQTableSize": 10000,
@@ -151,6 +151,12 @@
     },
     "SUM(amount),amount||amount > 0;||SUM(AMOUNT)||0||0||04c34904": {
       "llm_policy": -0.050000000000000044
+    },
+    "c.salary,e.name||d.name = 'Engineering'||||0||0||8572f438": {
+      "llm_policy": 11.995000000000001
+    },
+    "c.salary,e.name||||||0||0||e0510314": {
+      "llm_policy": 164.29270963129085
     }
   }
 }
