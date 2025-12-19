@@ -41,7 +41,6 @@ This is a standalone React hook (`useOptimizeSQL`) and API endpoint that optimiz
 
 - `explain` - Runs PostgreSQL EXPLAIN to analyze performance
 - `ai` - Uses RL optimization to find best SQL
-- `execute` - Executes query and returns actual results
 
 ### Response Format
 
@@ -336,30 +335,6 @@ const result = await optimizeSQL({
 - Index usage (+10 points)
 - Clean, readable SQL
 
----
-
-##  Troubleshooting
-
-### "HTTP ERROR 405" when visiting /api/optimize-sql in browser
-
-This is expected! The endpoint only accepts POST requests. Use curl, Postman, or the React hook.
-
-### Connection errors
-
-- Make sure server is running: `npm run dev`
-- Check port: `3004` (not `3000`)
-- Verify DATABASE_URL in `.env.local`
-
-### "Optimization incomplete" message
-
-The optimizer couldn't satisfy all constraints. Check:
-- `dataSource` matches your actual table names
-- `mustInclude` fields exist in those tables
-- Tables have proper relationships/foreign keys
-
----
-
-
 
 **To use this:**
 
@@ -379,5 +354,3 @@ The system works with **any PostgreSQL schema**
 ---
 
 **Live Demo**: https://natural-language-auto-complete-sql.vercel.app/
-
-**Questions?** Check the additional resources above or reach out!
