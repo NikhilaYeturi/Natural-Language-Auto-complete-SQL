@@ -1,4 +1,4 @@
-  # SQL Optimizer - Usage Guide for Shawn
+  # SQL Optimizer 
 
 ## Overview
 
