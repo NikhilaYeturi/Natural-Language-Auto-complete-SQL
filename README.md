@@ -113,14 +113,16 @@ console.log(result.sql);
 import { useOptimizeSQL } from '@/lib/hooks/useOptimizeSQL';
 
 function MyComponent() {
-  const { optimizeSQL, loading, result } = useOptimizeSQL();
+  const { optimizeSQL, loading, result } = useOptimizeSQL({
+    apiEndpoint: "https://natural-language-auto-complete-sql.vercel.app/api/optimize-sql"
+  });
 
   const handleOptimize = async () => {
     const result = await optimizeSQL({
-      intent: "Get all employees with departments",
+      intent: "Your natural language query description",
       constraints: {
-        dataSource: "employees_with_departments",
-        mustInclude: ["employee_id", "name", "department_name"]
+        dataSource: "table1_with_table2_with_table3",
+        mustInclude: ["field1", "field2", "field3"]
       }
     });
 
