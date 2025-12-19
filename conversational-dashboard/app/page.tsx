@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useOptimizeSQL } from "@/lib/hooks/useOptimizeSQL";
 
 interface ChatMessage {
   role: "assistant" | "user";
@@ -38,6 +39,23 @@ export default function Home() {
   // DEBUG PANEL
   const [debugLogs, setDebugLogs] = useState<string[]>([]);
   const [showDebug, setShowDebug] = useState(false);
+
+  // QUERY ANALYSIS
+  const [queryAnalysis, setQueryAnalysis] = useState<any | null>(null);
+
+  // OPTIMIZE SQL HOOK - Standalone React hook for RL optimization
+  const { optimizeSQL: runOptimization } = useOptimizeSQL({
+    tools: ["explain", "ai"],
+    onProgress: (log) => {
+      addDebugLog(`Iteration ${log.iteration}: ${log.passed ? "PASS ✓" : "FAIL ✗"} (Reward: ${log.reward})`);
+    },
+    onComplete: (result) => {
+      addDebugLog(`✓ Optimization complete! Final reward: ${result.optimizationMetadata.finalReward}`);
+    },
+    onError: (error) => {
+      addDebugLog(`✗ Optimization failed: ${error.message}`);
+    }
+  });
 
   const addDebugLog = (message: string) => {
     const timestamp = new Date().toLocaleTimeString();
@@ -196,11 +214,11 @@ export default function Home() {
     }
   };
 
-  // Optimize SQL using RL
+  // Optimize SQL using RL - Now using the standalone hook!
   const optimizeSQL = async () => {
     if (!objectiveAst) return;
 
-    addDebugLog("Starting RL optimization...");
+    addDebugLog("Starting RL optimization with analysis...");
     setStage("optimizing");
 
     setConversation((prev) => [
@@ -209,26 +227,23 @@ export default function Home() {
     ]);
 
     try {
-      const startTime = Date.now();
-      const res = await fetch("/api/rl/execute", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ objective: objectiveAst }),
-      });
+      // Use the hook's optimizeSQL function
+      const result = await runOptimization(objectiveAst);
 
-      const data = await res.json();
-      const duration = Date.now() - startTime;
+      // Store analysis data
+      if (result.analysis) {
+        setQueryAnalysis(result.analysis);
+        addDebugLog(`✓ Analysis: ${result.analysis.estimatedRows} rows, cost ${result.analysis.estimatedCost.toFixed(2)}`);
+        addDebugLog(`  Fields: ${result.analysis.fields.join(", ")}`);
+      }
 
-      addDebugLog(`✓ RL optimization complete (${duration}ms)`);
-      addDebugLog(`Optimized SQL: ${data.sql}`);
-
-      // Log iteration details
-      if (data.iterationLogs && data.iterationLogs.length > 0) {
-        addDebugLog(`\n=== RL OPTIMIZATION LOOPS (${data.iterationLogs.length} iterations) ===`);
-        data.iterationLogs.forEach((log: any) => {
+      // Log detailed iteration info
+      const iterationLogs = result.optimizationMetadata?.iterationLogs || [];
+      if (iterationLogs.length > 0) {
+        addDebugLog(`\n=== RL OPTIMIZATION LOOPS (${iterationLogs.length} iterations) ===`);
+        iterationLogs.forEach((log: any) => {
           addDebugLog(`\n--- Iteration ${log.iteration} ---`);
           addDebugLog(`Action: ${log.action}`);
-          addDebugLog(`Evaluation: ${log.evaluation.passed ? "PASS ✓" : "FAIL ✗"}`);
           addDebugLog(`Semantic Match: ${log.semanticMatch ? "YES ✓" : "NO ✗"}`);
           if (log.semanticIssues && log.semanticIssues.length > 0) {
             addDebugLog(`Semantic Issues: ${log.semanticIssues.join(", ")}`);
@@ -244,7 +259,7 @@ export default function Home() {
         addDebugLog(`\n=== END LOOPS ===`);
       }
 
-      setSql(data.sql);
+      setSql(result.sql);
       setStage("sql");
 
       setConversation((prev) => [
@@ -502,6 +517,48 @@ export default function Home() {
               placeholder="SQL query"
             />
           </div>
+
+          {/* Query Analysis - Shows after optimization */}
+          {queryAnalysis && (
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
+              <h2 className="text-lg font-semibold text-black mb-4">Query Analysis (EXPLAIN)</h2>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="text-sm text-gray-600 mb-1">Estimated Rows</div>
+                  <div className="text-2xl font-bold text-gray-900">{queryAnalysis.estimatedRows}</div>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="text-sm text-gray-600 mb-1">Estimated Cost</div>
+                  <div className="text-2xl font-bold text-gray-900">{queryAnalysis.estimatedCost.toFixed(2)}</div>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg col-span-2">
+                  <div className="text-sm text-gray-600 mb-2">Query Features</div>
+                  <div className="flex gap-2 flex-wrap">
+                    {queryAnalysis.usesIndex && (
+                      <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
+                        ✓ Uses Index
+                      </span>
+                    )}
+                    {queryAnalysis.hasAggregation && (
+                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
+                        Aggregation
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg col-span-2">
+                  <div className="text-sm text-gray-600 mb-2">Selected Fields ({queryAnalysis.fields.length})</div>
+                  <div className="flex gap-2 flex-wrap">
+                    {queryAnalysis.fields.map((field: string, idx: number) => (
+                      <span key={idx} className="px-2 py-1 bg-white border border-gray-300 rounded text-xs font-mono text-gray-700">
+                        {field}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Query Results */}
           {queryResults && (
