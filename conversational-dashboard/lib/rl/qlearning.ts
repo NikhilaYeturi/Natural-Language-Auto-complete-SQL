@@ -1,6 +1,5 @@
 import {
   QTable,
-  SQLAction,
   QLearningConfig,
   PersistedQTable,
 } from "./types";
@@ -38,9 +37,9 @@ export async function loadQTable(): Promise<void> {
     // Convert persisted format to Map
     qtable = new Map();
     for (const [stateKey, actions] of Object.entries(persisted.qtable)) {
-      const actionMap = new Map<SQLAction, number>();
+      const actionMap = new Map<string, number>();
       for (const [action, qValue] of Object.entries(actions)) {
-        actionMap.set(action as SQLAction, qValue);
+        actionMap.set(action as string, qValue);
       }
       qtable.set(stateKey, actionMap);
     }
@@ -85,7 +84,7 @@ export async function saveQTable(): Promise<void> {
 /**
  * Get Q-value for state-action pair
  */
-export function getQValue(stateKey: string, action: SQLAction): number {
+export function getQValue(stateKey: string, action: string): number {
   if (!qtable.has(stateKey)) {
     return getInitialQValue(action);
   }
@@ -103,7 +102,7 @@ export function getQValue(stateKey: string, action: SQLAction): number {
  */
 export function setQValue(
   stateKey: string,
-  action: SQLAction,
+  action: string,
   value: number
 ): void {
   if (!qtable.has(stateKey)) {
@@ -125,10 +124,10 @@ export function setQValue(
  */
 export function updateQValue(
   stateKey: string,
-  action: SQLAction,
+  action: string,
   reward: number,
   nextStateKey: string,
-  applicableActions: SQLAction[]
+  applicableActions: string[]
 ): void {
   const currentQ = getQValue(stateKey, action);
 
@@ -148,8 +147,8 @@ export function updateQValue(
  */
 export function selectAction(
   stateKey: string,
-  applicableActions: SQLAction[]
-): SQLAction {
+  applicableActions: string[]
+): string {
   // Exploration: random action
   if (Math.random() < config.epsilon) {
     const randomIndex = Math.floor(Math.random() * applicableActions.length);
@@ -187,9 +186,9 @@ export function decayEpsilon(): void {
 /**
  * Get initial Q-value for new state-action pairs
  */
-function getInitialQValue(action: SQLAction): number {
-  // Slight bias toward LLM policy initially
-  if (action === SQLAction.USE_LLM_POLICY) {
+function getInitialQValue(action: string): number {
+  // Slight bias toward generator action initially
+  if (action === "USE_GENERATOR") {
     return 0.5;
   }
   return 0.0;
@@ -213,10 +212,10 @@ export function getQTableStats(): {
   size: number;
   epsilon: number;
   queriesProcessed: number;
-  topStateActions: Array<{ stateKey: string; action: SQLAction; qValue: number }>;
+  topStateActions: Array<{ stateKey: string; action: string; qValue: number }>;
 } {
   // Get top 10 state-action pairs by Q-value
-  const allPairs: Array<{ stateKey: string; action: SQLAction; qValue: number }> = [];
+  const allPairs: Array<{ stateKey: string; action: string; qValue: number }> = [];
 
   for (const [stateKey, actions] of qtable.entries()) {
     for (const [action, qValue] of actions.entries()) {

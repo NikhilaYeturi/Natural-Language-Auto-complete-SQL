@@ -1,5 +1,25 @@
 [
   {
+    "naturalText": "SELECT *\nFROM employees\nWHERE id IN (\n  SELECT employee_id\n  FROM compensation\n  WHERE employee_id IN (\n    SELECT id\n    FROM employees\n    WHERE department_id IN (\n      SELECT id FROM departments\n    )\n  )\n)\nAND status = 'active';\n\n\noptimize this query",
+    "createdAt": "2025-12-20T19:19:32.407Z",
+    "id": "u-1766258372407"
+  },
+  {
+    "naturalText": "optimize this text, dont make it an email format. \n\nYo wassup myan, how u doin? wtf was that shirt? tell me how u can make it up to me for ditchin me last night",
+    "createdAt": "2025-12-20T19:18:13.698Z",
+    "id": "u-1766258293698"
+  },
+  {
+    "naturalText": "optimize thsi query. \nSELECT *\nFROM employees\nWHERE id IN (\n  SELECT employee_id\n  FROM compensation\n  WHERE employee_id IN (\n    SELECT id\n    FROM employees\n    WHERE department_id IN (\n      SELECT id FROM departments\n    )\n  )\n)\nAND status = 'active';",
+    "createdAt": "2025-12-20T18:45:10.767Z",
+    "id": "u-1766256310767"
+  },
+  {
+    "naturalText": "optimize this text, dont make it an email format. \n\nYo wassup myan, how u doin? wtf was that shirt? tell me how u can make it up to me for ditchin me last night",
+    "createdAt": "2025-12-20T18:43:30.676Z",
+    "id": "u-1766256210676"
+  },
+  {
     "naturalText": "optimize this teext\n\nSo tell me wassup and did y'all eat and all? hit me up with some news wot happened ysterday ok?\n\nhey so basically i just wanted to say that this thing is like really important\nand we should probably look into it asap because it’s kinda urgent lol",
     "createdAt": "2025-12-20T03:54:54.936Z",
     "id": "u-1766202894936"

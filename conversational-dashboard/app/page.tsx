@@ -168,7 +168,7 @@ export default function Home() {
               {showDebug ? "Hide Debug" : "Show Debug"}
             </button>
           </div>
-          <p className="text-gray-500 text-sm mt-2">Ask me anything - I'll help with SQL, content, analysis, and more</p>
+          <p className="text-gray-500 text-sm mt-2">Ask me anything </p>
         </div>
 
         {/* DEBUG PANEL */}

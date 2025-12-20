@@ -1,9 +1,3 @@
-/**
- * Generic Action System
- *
- * Domain-agnostic action selection and application for RL optimization.
- * Works with any type of output and objective.
- */
 
 /**
  * Generic action types
@@ -30,9 +24,7 @@ export enum GenericAction {
   RESET = "RESET",
 }
 
-/**
- * Action configuration
- */
+
 export interface ActionConfig {
   type: GenericAction;
   parameters?: Record<string, any>;

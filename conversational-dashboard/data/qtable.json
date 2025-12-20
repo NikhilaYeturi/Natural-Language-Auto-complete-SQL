@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "updatedAt": "2025-12-20T03:55:18.539Z",
+  "updatedAt": "2025-12-20T19:19:48.843Z",
   "hyperparams": {
     "alpha": 0.1,
     "gamma": 0.9,
-    "epsilon": 0.19213860871508737,
+    "epsilon": 0.18644602388308096,
     "epsilonDecay": 0.995,
     "epsilonMin": 0.05,
     "maxQTableSize": 10000,
@@ -151,6 +151,99 @@
     },
     "b4d9f20e90d7dc62": {
       "USE_GENERATOR": 7
+    },
+    "025a13498b520ecd": {
+      "USE_GENERATOR": -3
+    },
+    "c7619b8c61ecc1cc": {
+      "USE_GENERATOR": -3
+    },
+    "5884591883033674": {
+      "USE_GENERATOR": -3
+    },
+    "34ba651004b1d4db": {
+      "USE_GENERATOR": -3
+    },
+    "b0e04f7e5b8918ce": {
+      "USE_GENERATOR": -3
+    },
+    "8c584ea5aaad2db3": {
+      "USE_GENERATOR": -3
+    },
+    "217c514b3193f284": {
+      "USE_GENERATOR": 7
+    },
+    "0286a08f2412fada": {
+      "USE_GENERATOR": -3
+    },
+    "ae5223135e59bb6b": {
+      "USE_GENERATOR": -3
+    },
+    "a86337c941543035": {
+      "USE_GENERATOR": -3
+    },
+    "26771f2696f1edc8": {
+      "USE_GENERATOR": -3
+    },
+    "63850a10de51dd74": {
+      "USE_GENERATOR": -3
+    },
+    "1fada8ca567585e0": {
+      "USE_GENERATOR": -3
+    },
+    "7f6dc89ca6aee006": {
+      "PERTURB_OUTPUT": -2.955
+    },
+    "4efce2b11a04d004": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "1c3f58dec9011a8e": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "271db40ec648873d": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "0d970535dcb081e5": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "5e163c0744e7c48b": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "513aa288c81f9e00": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "37f4a7fb157a4edb": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "e0f92d47d12c7eb9": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "68cb7fd096568f5d": {
+      "RESET": -2.955
+    },
+    "f8c067533c18a454": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "72aa5b874efe20e5": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "123dfb062d0b0421": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "df5d9468b19f7cb8": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "26e40cda3ec59ed0": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "5bfda08636400f23": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "109ce9d2abb7cfa9": {
+      "USE_GENERATOR": -2.5050000000000003
+    },
+    "de010413672b2ef5": {
+      "USE_GENERATOR": -2.5050000000000003
     }
   }
 }

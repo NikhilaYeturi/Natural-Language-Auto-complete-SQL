@@ -107,7 +107,7 @@ export async function POST(req: NextRequest) {
   try {
     const { objective, userQuery } = await req.json();
 
-    console.log('\n========== RL OPTIMIZATION WITH Q-LEARNING ==========');
+    console.log('\n RL OPTIMIZATION WITH Q-LEARNING ');
     console.log('User Query:', userQuery);
     console.log('Objective:', JSON.stringify(objective, null, 2));
 
@@ -120,7 +120,11 @@ export async function POST(req: NextRequest) {
       const result = evaluateOutput(output, objective);
       return {
         passed: result.passed,
-        feedback: result.issues.length > 0 ? result.issues.join('; ') : null,
+        feedback: result.issues.length > 0 ? {
+          code: 'CONSTRAINT_VIOLATION',
+          message: result.issues.join('; '),
+          fix: 'Address the listed issues to meet constraints'
+        } : undefined,
         constraintsSatisfied: result.passed,
         issues: result.issues,
       };
@@ -136,7 +140,7 @@ export async function POST(req: NextRequest) {
       6, // maxIterations - reduced for speed
     );
 
-    console.log('\n========== Q-LEARNING RESULTS ==========');
+    console.log('\n Q-LEARNING RESULTS ');
     console.log('Total Iterations:', result.iterations);
     console.log('Final Reward:', result.finalReward);
     console.log('Iteration Logs:', result.iterationLogs?.length || 0, 'logs');
