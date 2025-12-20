@@ -75,33 +75,6 @@ This system analyzes user queries, generates structured objectives, and uses Q-l
 - Node.js 18+
 - OpenAI API key
 
-### Installation
-
-```bash
-# Clone the repository
-git clone <your-repo-url>
-cd conversational-dashboard
-
-# Install dependencies
-npm install
-
-# Create environment file
-cp .env.example .env.local
-
-# Add your OpenAI API key to .env.local
-OPENAI_API_KEY=your_key_here
-
-# Run development server
-npm run dev
-
-# Open http://localhost:3004
-```
-
-### First Run
-- Data files (`qtable.json`, `experiences.json`) are created automatically
-- Q-table is empty initially - system will explore more
-- After 5-10 uses, Q-table fills up and optimization gets faster
-
 ##  Key Features
 
 ### Domain-Agnostic
