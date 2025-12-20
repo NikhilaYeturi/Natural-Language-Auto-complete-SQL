@@ -12,7 +12,7 @@ export default function Home() {
 
   // CORE STATE
   const [conversation, setConversation] = useState<ChatMessage[]>([
-    { role: "assistant", text: "Hello! I can help you with anything - SQL queries, content writing, data analysis, and more. What would you like me to do?" },
+    { role: "assistant", text: "Hello! What do you want to optimize today?" },
   ]);
 
   const [userInput, setUserInput] = useState("");
